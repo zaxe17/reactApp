@@ -1,4 +1,4 @@
-import aboutImg from "../assets/about.jpg";
+import aboutImg from "../assets/jacolbia_about.png";
 import { ABOUT_TEXT } from "../constants";
 import { motion } from "framer-motion";
 
@@ -24,6 +24,7 @@ const About = () => {
 							className="rounded-2xl"
 							src={aboutImg}
 							alt="about_image"
+                            width={500}
 						/>
 					</div>
 				</motion.div>

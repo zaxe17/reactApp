@@ -24,8 +24,8 @@ const Projects = () => {
 							<img
 								src={project.image}
 								alt={project.title}
-								width={150}
-								height={150}
+								width={250}
+								height={250}
 								className="mb-6 rounded transition-transform duration-300 ease-in-out transform hover:scale-110"
 							/>
 						</motion.div>
