@@ -1,6 +1,7 @@
 import { HERO_CONTENT } from "../constants";
 import profilePic from "../assets/jacolbia.png";
 import { motion } from "framer-motion";
+import {useTypewriter, Cursor} from "react-simple-typewriter";
 
 const container = (delay) => ({
 	hidden: { x: -100, opacity: 0 },
@@ -12,6 +13,11 @@ const container = (delay) => ({
 });
 
 const Hero = () => {
+	const [text] = useTypewriter({
+		words: ['Web Developer', 'Backend Developer', 'Mangungupal'],
+		loop: {},
+	});
+
 	return (
 		<div className="border-b border-neutral-900 pb-4 lg:mb-35">
 			<div className="flex flex-warp">
@@ -29,7 +35,8 @@ const Hero = () => {
 							initial="hidden"
 							animate="visible"
 							className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent">
-							Web Developer
+							I'm a <span>{text}</span>
+							<Cursor cursorColor="violet" />
 						</motion.span>
 						<motion.p
 							variants={container(1)}

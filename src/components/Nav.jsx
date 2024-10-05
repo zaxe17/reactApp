@@ -1,8 +1,8 @@
 import logo from "../assets/logo.png";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 
 const Nav = () => {
 	return (
@@ -12,10 +12,18 @@ const Nav = () => {
 			</div>
 
 			<div className="m-8 flex items-center justify-center gap-4 text=2xl">
-				<FaLinkedin />
-				<FaGithub />
-				<FaSquareXTwitter />
-				<FaInstagram />
+				<a href="https://www.linkedin.com/in/jan-marc-jacolbia-b86a00296/">
+					<FaLinkedin />
+				</a>
+				<a href="https://github.com/zaxe17">
+					<FaGithub />
+				</a>
+				<a href="https://www.facebook.com/janmarc.soberanojacolbia.9">
+					<FaFacebookSquare />
+				</a>
+				<a href="https://www.instagram.com/zaxe.jm/">
+					<FaInstagram />
+				</a>
 			</div>
 		</nav>
 	);

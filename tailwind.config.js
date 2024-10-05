@@ -8,19 +8,6 @@ export default {
     extend: {},
   },
   plugins: [
-    function ({ addUtilities }) {
-      addUtilities({
-        '.scrollbar-hide': {
-          /* For WebKit browsers like Chrome and Safari */
-          '&::-webkit-scrollbar': {
-            display: 'none',
-          },
-          /* For IE and Edge */
-          '-ms-overflow-style': 'none',
-          /* For Firefox */
-          'scrollbar-width': 'none',
-        },
-      });
-    },
+    require('tailwind-scrollbar-hide')
   ],
 }
