@@ -34,7 +34,7 @@ const Hero = () => {
 							variants={container(0.5)}
 							initial="hidden"
 							animate="visible"
-							className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent">
+							className="bg-gradient-to-r from-fuchsia-500 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent">
 							I'm a <span>{text}</span>
 							<Cursor cursorColor="violet" />
 						</motion.span>
