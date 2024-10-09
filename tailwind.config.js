@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        'fuchsia-shadow': '0 2px 10px #86198f',
+        'fuchsia-shadow': '0 2px 20px #86198f',
       }
     },
   },
