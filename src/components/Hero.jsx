@@ -14,7 +14,7 @@ const container = (delay) => ({
 
 const Hero = () => {
 	const [text] = useTypewriter({
-		words: ['Web Developer', 'Backend Developer', 'Mangungupal'],
+		words: ['Web Developer', 'Backend Developer', 'Full-stack Developer'],
 		loop: {},
 	});
 
