@@ -84,3 +84,24 @@ export const CONTACT = {
   phoneNo: "+63 926 5424 417 ",
   email: "jmjacolbiapogi17@gmail.com",
 };
+
+export const skills = [
+  {
+    category: "Front-end",
+    skills: [
+      { name: "HTML", level: 80 },
+      { name: "CSS", level: 90 },
+      { name: "JavaScript", level: 50 },
+      { name: "React.js", level: 30 },
+    ],
+  },
+  {
+    category: "Back-end",
+    skills: [
+      { name: "PHP", level: 75 },
+      { name: "Node.js", level: 54 },
+      { name: "Java", level: 48 },
+      { name: "C++", level: 40 },
+    ],
+  },
+];
