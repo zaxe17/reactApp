@@ -49,7 +49,7 @@ const Skills = () => {
 													opacity: 1,
 													width: 0,
 												}}
-												transition={{ duration: 1 }}
+												transition={{ duration: 2 }}
 												className="h-full bg-purple-500 rounded-md"></motion.div>
 										</div>
 									</div>
@@ -94,7 +94,7 @@ const Skills = () => {
 													opacity: 1,
 													width: 0,
 												}}
-												transition={{ duration: 1 }}
+												transition={{ duration: 2 }}
 												className="h-full bg-purple-500 rounded-md"></motion.div>
 										</div>
 									</div>
