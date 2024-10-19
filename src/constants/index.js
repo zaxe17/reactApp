@@ -7,7 +7,7 @@ import project5 from "../assets/projects/project-5.jpg";
 
 export const HERO_CONTENT = `I am a passionate full stack developer who loves building strong and scalable web applications. Working with front-end technologies like React and Next.js, as well as back-end technologies like Java, Node.js, MySQL, and MongoDB. My goal is to use my skills to create new solutions that help businesses grow and provide great experiences for users.`;
 
-export const ABOUT_TEXT = `Welcome to my About Page! I'm a passionate and experienced web developer who's dedicated to bringing
+export const ABOUT_TEXT = `I'm a passionate and experienced web developer who's dedicated to bringing
                           your digital dreams to life. With a strong background in front-end and back-end development,
                           I thrive on turning complex concepts into user-friendly, visually stunning websites. My journey in the
                           world of web development began years ago, and I've since honed my skills in a wide range
