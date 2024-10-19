@@ -24,7 +24,7 @@ const About = () => {
 							className="rounded-2xl"
 							src={aboutImg}
 							alt="about_image"
-                            width={500}
+							width={500}
 						/>
 					</div>
 				</motion.div>
@@ -34,7 +34,9 @@ const About = () => {
 					transition={{ duration: 1 }}
 					className="w-full lg:w-1/2">
 					<div className="flex justify-center lg:justify-start">
-						<p className="my-2 max-w-xl py-6">&emsp;&emsp;&emsp;{ABOUT_TEXT}</p>
+						<p className="my-2 max-w-xl py-6">
+							&emsp;&emsp;&emsp;{ABOUT_TEXT}
+						</p>
 					</div>
 				</motion.div>
 			</div>

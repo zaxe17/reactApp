@@ -22,10 +22,10 @@ export const ABOUT_TEXT = `Welcome to my About Page! I'm a passionate and experi
 export const EXPERIENCES = [
     {
         year: "2024 - Present",
-        role: "Learning JavaScript",
+        role: "Learning Frameworks",
         company: "",
-        description: `Developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-        technologies: ["Javascript", "React.js", "Node.js", "MongoDb"],
+        description: `Learning frameworks help learners focus on key concepts, track progress, and apply what they’ve learned through practical, hands-on experiences.`,
+        technologies: ["React.js", "Node.js", "MongoDb", "Tailwind"],
     },
     {
         year: "2022 - 2024",
@@ -55,7 +55,7 @@ export const PROJECTS = [
         title: "Note Taking App",
         image: project1,
         description:
-            "A functional Note taking website to make everybody take note the important things.",
+            "Experience creativity and productivity with its user-friendly features and a captivating interface as you take notes of your thoughts, ideas, and reminders—whether you're planning, creating, or brainstorming.",
         link: "http://techtilanotess.22web.org/",
         technologies: ["HTML", "CSS", "JavaScript", "PHP", "XAMPP"],
     },
@@ -78,7 +78,7 @@ export const PROJECTS = [
         title: "Stream Lining Inventory",
         image: project4,
         description:
-            "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
+            "We are dedicated to revolutionizing inventory control through real-time tracking and automation. Our comprehensive system streamlines stock replenishment, order processing, and enhances customer service.",
         link: "http://streamlining.22web.org/",
         technologies: ["HTML", "CSS", "XAMPP", "PHP", "MySQL"],
     },

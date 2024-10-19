@@ -1,7 +1,7 @@
 import { HERO_CONTENT } from "../constants";
 import profilePic from "../assets/jacolbia.png";
 import { motion } from "framer-motion";
-import {useTypewriter, Cursor} from "react-simple-typewriter";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const container = (delay) => ({
 	hidden: { x: -100, opacity: 0 },
