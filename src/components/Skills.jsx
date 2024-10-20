@@ -33,13 +33,13 @@ const Skills = () => {
 								className="bg-neutral-800 p-6 rounded-lg shadow-lg">
 								{column.skills.map((skill, idx) => (
 									<div key={idx} className="progress mb-8">
-										<h3 className="text-xl flex items-center mb-2 text-purple-500">
+										<h3 className="text-xl flex items-center mb-2 text-purple-600">
 											{skill.name}
 											<span className="ml-auto text-gray-400">
 												{skill.level}%
 											</span>
 										</h3>
-										<div className="w-full h-4 bg-gray-600 rounded-md">
+										<div className="w-full h-6 p-1 rounded-[10px] border-4 border-purple-500">
 											<motion.div
 												whileInView={{
 													opacity: 1,
@@ -78,13 +78,13 @@ const Skills = () => {
 								className="bg-neutral-800 p-6 rounded-lg shadow-lg">
 								{column.skills.map((skill, idx) => (
 									<div key={idx} className="progress mb-8">
-										<h3 className="text-xl flex items-center mb-2 text-purple-500">
+										<h3 className="text-xl flex items-center mb-2 text-purple-600">
 											{skill.name}
 											<span className="ml-auto text-gray-400">
 												{skill.level}%
 											</span>
 										</h3>
-										<div className="w-full h-4 bg-gray-600 rounded-md">
+										<div className="w-full h-6 p-1 rounded-[10px] border-4 border-purple-500">
 											<motion.div
 												whileInView={{
 													opacity: 1,
