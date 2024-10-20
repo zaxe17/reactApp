@@ -39,7 +39,7 @@ const Skills = () => {
 												{skill.level}%
 											</span>
 										</h3>
-										<div className="w-full h-6 p-1 rounded-[10px] border-4 border-purple-500">
+										<div className="w-full h-6 p-1 rounded-[10px] border-2 lg:border-4 border-purple-500">
 											<motion.div
 												whileInView={{
 													opacity: 1,
@@ -84,7 +84,7 @@ const Skills = () => {
 												{skill.level}%
 											</span>
 										</h3>
-										<div className="w-full h-6 p-1 rounded-[10px] border-4 border-purple-500">
+										<div className="w-full h-6 p-1 rounded-[10px] border-2 lg:border-4 border-purple-500">
 											<motion.div
 												whileInView={{
 													opacity: 1,
