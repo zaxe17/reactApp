@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { spotifyLink } from "../constants";
 
 const Spotify = () => {
 	return (
@@ -12,12 +13,12 @@ const Spotify = () => {
 			</motion.h2>
 			<motion.div
 				whileInView={{ opacity: 1, scale: 1, y: 0 }}
-				initial={{ opacity: 0, scale: 0.80, y: 100 }}
+				initial={{ opacity: 0, scale: 0.8, y: 100 }}
 				transition={{ duration: 1 }}
 				className="flex items-center justify-center">
 				<iframe
-					className="lg:w-3/4 h-96 lg:h-[35rem] rounded-3xl"
-					src="https://open.spotify.com/embed/playlist/61xN4A5OcgzPPAsHIZpE8G?utm_source=generator"
+					className="lg:w-3/4 h-96 lg:h-[35rem] rounded-3xl shadow-purple-shadow"
+					src={spotifyLink}
 					allowFullScreen
 					allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 					loading="lazy"
