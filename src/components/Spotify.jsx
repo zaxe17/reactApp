@@ -16,7 +16,7 @@ const Spotify = () => {
 				transition={{ duration: 1 }}
 				className="flex items-center justify-center">
 				<iframe
-					className="lg:w-3/4 h-[20rem] lg:h-[30rem] rounded-3xl"
+					className="lg:w-3/4 h-96 lg:h-[35rem] rounded-3xl"
 					src="https://open.spotify.com/embed/playlist/61xN4A5OcgzPPAsHIZpE8G?utm_source=generator"
 					allowFullScreen
 					allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
