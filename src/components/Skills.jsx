@@ -75,7 +75,7 @@ const Skills = () => {
 								whileInView={{ opacity: 1, x: 0 }}
 								initial={{ opacity: 0, x: 100 }}
 								transition={{ duration: 1.5 }}
-								className="bg-neutral-800 p-6 rounded-lg shadow-lg">
+								className="bg-neutral-800 p-6 rounded-lg shadow-xl">
 								{column.skills.map((skill, idx) => (
 									<div key={idx} className="progress mb-8">
 										<h3 className="text-xl flex items-center mb-2 text-purple-600">

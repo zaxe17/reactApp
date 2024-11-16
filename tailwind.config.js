@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        'fuchsia-shadow': '0 2px 20px #86198f',
-        'purple-shadow': '0 0 30px 5px #a855f7',
+        'fuchsia-shadow': '0 2px 20px 2px #86198f',
+        'purple-shadow': '0 0 20px 5px #a855f7',
       }
     },
   },
