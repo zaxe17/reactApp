@@ -13,7 +13,7 @@ const Spotify = () => {
 			<motion.div
 				whileInView={{ opacity: 1, scale: 1, y: 0 }}
 				initial={{ opacity: 0, scale: 0.80, y: 100 }}
-				transition={{ duration: 1.5 }}
+				transition={{ duration: 1 }}
 				className="flex items-center justify-center">
 				<iframe
 					className="lg:w-3/4 h-[20rem] lg:h-[30rem] rounded-3xl"
