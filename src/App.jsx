@@ -7,7 +7,6 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import { useEffect } from 'react';
 import Skills from "./components/Skills";
-import Spotify from "./components/Spotify";
 
 const App = () => {
 	useEffect(() => {
@@ -24,7 +23,6 @@ const App = () => {
 				<Navbar />
 				<Hero />
 				<About />
-				<Spotify />
 				<Technologies />
 				<Skills />
 				<Experience />

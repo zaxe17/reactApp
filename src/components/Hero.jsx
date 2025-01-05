@@ -14,7 +14,7 @@ const container = (delay) => ({
 
 const Hero = () => {
 	const [text] = useTypewriter({
-		words: ['Web Developer', 'Backend Developer', 'Full-stack Developer'],
+		words: ['Frontend Developer', 'Backend Developer'],
 		loop: {},
 	});
 
@@ -22,19 +22,19 @@ const Hero = () => {
 		<div className="border-b border-neutral-900 pb-4 lg:mb-35">
 			<div className="flex flex-wrap">
 				<div className="w-full lg:w-1/2">
-					<div className="flex flex-col items-center lg:items-start">
+					<div className="flex flex-col items-start">
 						<motion.h1
 							variants={container(0)}
 							initial="hidden"
 							animate="visible"
-							className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl">
-							Jan Marc
+							className="pb-10 lg:pb-0 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl">
+							Jan Marc Jacolbia
 						</motion.h1>
 						<motion.span
 							variants={container(0.5)}
 							initial="hidden"
 							animate="visible"
-							className="bg-gradient-to-r from-fuchsia-500 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent">
+							className="bg-gradient-to-r from-fuchsia-500 via-slate-500 to-purple-500 bg-clip-text text-2xl lg:text-4xl tracking-tight text-transparent pb-4">
 							I'm a <span>{text}</span>
 							<Cursor cursorColor="violet" />
 						</motion.span>
