@@ -28,7 +28,7 @@ const Experience = () => {
 						key={index}
 						className="mb-8 flex flex-wrap lg:justify-center relative">
 						<motion.div
-							className="absolute border-2 border-black top-0 -left-4 lg:left-1/3 transform -translate-x-1/2 h-4 w-4 rounded-full bg-purple-700"
+							className="absolute border-2 border-black my-5 -left-4 lg:left-1/3 transform -translate-x-1/2 h-4 w-4 rounded-full bg-purple-700"
 							whileInView={{ opacity: 1 }}
 							initial={{ opacity: 0 }}
 							transition={{ duration: 1 }}></motion.div>
@@ -37,7 +37,7 @@ const Experience = () => {
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
 							className="w-full lg:w-1/4">
-							<p className="mb-2 text-sm text-neutral-400">
+							<p className="my-5 mb-2 text-sm text-neutral-400">
 								{experience.year}
 							</p>
 						</motion.div>
