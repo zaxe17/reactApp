@@ -1,8 +1,5 @@
 import logo from "../assets/logo.png";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaFacebookSquare } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaFacebookSquare } from "react-icons/fa";
 
 const Nav = () => {
 	return (
