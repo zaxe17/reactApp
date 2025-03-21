@@ -47,6 +47,7 @@ const Hero = () => {
 						</motion.p>
 						{button.map((btn, index) => (
 							<motion.div
+								key={index}
 								className="flex items-center justify-center gap-6 lg:gap-10 mb-10 lg:my-10 font-thin tracking-[5px]"
 								variants={container(1.5)}
 								initial="hidden"
