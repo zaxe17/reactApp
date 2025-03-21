@@ -1,4 +1,4 @@
-import { HERO_CONTENT } from "../constants";
+import { HERO_CONTENT, button } from "../constants";
 import profilePic from "../assets/jacolbia.png";
 import { motion } from "framer-motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -14,7 +14,7 @@ const container = (delay) => ({
 
 const Hero = () => {
 	const [text] = useTypewriter({
-		words: ['Frontend Developer', 'Backend Developer'],
+		words: ["Frontend Developer", "Backend Developer"],
 		loop: {},
 	});
 
@@ -42,9 +42,45 @@ const Hero = () => {
 							variants={container(1)}
 							initial="hidden"
 							animate="visible"
-							className="my-2 max-w-xl py-6 font-light tracking-tighter">
+							className="my-2 max-w-xl py-6 font-light tracking-tighter text-xl">
 							{HERO_CONTENT}
 						</motion.p>
+						{button.map((btn, index) => (
+							<motion.div
+								className="flex items-center justify-center gap-6 lg:gap-10 mb-10 lg:my-10 font-thin tracking-[5px]"
+								variants={container(1.5)}
+								initial="hidden"
+								animate="visible">
+								<motion.button
+									className="px-5 lg:px-15 py-2 lg:py-3 rounded-md relative radial-gradient cursor-pointer"
+									initial={{ "--x": "100%", scale: 1 }}
+									animate={{ "--x": "-100%" }}
+									whileTap={{ scale: 0.97 }}
+									transition={{
+										repeat: Infinity,
+										repeatType: "loop",
+										repeatDelay: 1,
+										type: "spring",
+										stiffness: 20,
+										damping: 15,
+										mass: 2,
+										scale: {
+											type: "spring",
+											stiffness: 10,
+											damping: 5,
+											mass: 0.1,
+										},
+									}}
+									onClick={() =>
+										(window.location.href = btn.link)
+									}>
+									<span className="text-neutral-100 font-light h-full w-full block relative linear-mask text-[10px] lg:text-lg uppercase text-shadow-white">
+										{btn.label}
+									</span>
+									<span className="block absolute inset-0 rounded-md p-px linear-overlay" />
+								</motion.button>
+							</motion.div>
+						))}
 					</div>
 				</div>
 				<div className="w-full lg:w-1/2 lg:p-8">

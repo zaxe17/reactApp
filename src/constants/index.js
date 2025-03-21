@@ -107,3 +107,10 @@ export const skills = [
 ];
 
 export const spotifyLink = "https://open.spotify.com/embed/playlist/4lIhJVhCR1JoCigPmZILhp?utm_source=generator";
+
+export const button = [
+    {
+        label: "Join on Discord",
+        link: "https://discord.gg/HrrzrKJX3R"
+    },
+]
