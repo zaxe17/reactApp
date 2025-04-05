@@ -108,7 +108,7 @@ export const skills = [
 
 export const button = [
     {
-        label: "Join on Discord",
-        link: "https://discord.gg/HrrzrKJX3R"
+        label: "Discord",
+        link: "https://dcserver.vercel.app/"
     },
 ]
