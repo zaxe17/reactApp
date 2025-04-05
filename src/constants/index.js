@@ -3,7 +3,7 @@ import * as FILES from "./files"
 
 export const HERO_CONTENT = `I am a passionate full stack developer who loves building strong and scalable web applications.`;
 
-export const ABOUT_TEXT = `I'm a passionate and experienced web developer who's dedicated to bringing your digital dreams to life. With a strong background in front-end and back-end development, I thrive on turning complex concepts into user-friendly, visually stunning websites. My journey in the world of web development began years ago, and I've since honed my skills in a wide range of programming languages, frameworks, and technologies. Whether it's designing responsive layouts, optimizing performance, or crafting seamless user experiences, I'm committed to staying at the forefront of this ever-evolving industry. I love collaborating with clients and fellow developers, turning ideas into reality, and creating innovative solutions. When I'm not coding, you can find me exploring the latest web trends, experimenting with new tools, and seeking inspiration from both the digital and physical worlds. Let's work together to transform your online presence and make your vision a reality!`;
+export const ABOUT_TEXT = `I have expertise in front-end development and am an enthusiastic web developer. Building responsive, aesthetically pleasing, and user-friendly websites that provide excellent user experiences is my goal. In addition to continuously keeping up with the newest web trends and technologies, I enjoy transforming ideas into creative digital solutions.`;
 
 export const EXPERIENCES = [
     {
