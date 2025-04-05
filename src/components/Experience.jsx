@@ -1,7 +1,29 @@
 import { EXPERIENCES } from "../constants";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 const Experience = () => {
+	const controls = useAnimation();
+	const { ref, inView } = useInView({
+		triggerOnce: false,
+		threshold: 0.1,
+	});
+
+	useEffect(() => {
+		if (inView) {
+			controls.start({
+				height: "100%",
+				transition: { duration: 2, delay: 1 },
+			});
+		} else {
+			controls.start({
+				height: 0,
+				transition: { duration: 0.3 },
+			});
+		}
+	}, [inView, controls]);
+
 	return (
 		<div className="border-b border-purple-500 pb-4">
 			<motion.h2
@@ -13,16 +35,10 @@ const Experience = () => {
 			</motion.h2>
 			<div className="relative">
 				<motion.div
+					ref={ref}
 					className="absolute border-l-2 border-purple-700 -left-4 lg:left-1/3 transform -translate-x-1/2"
-					whileInView={{
-						opacity: 1,
-						height: "100%",
-					}}
-					initial={{
-						opacity: 1,
-						height: 0,
-					}}
-					transition={{ duration: 5, delay: 0.8 }}></motion.div>
+					initial={{ opacity: 1, height: 0 }}
+					animate={controls}></motion.div>
 				{EXPERIENCES.map((experience, index) => (
 					<div
 						key={index}
