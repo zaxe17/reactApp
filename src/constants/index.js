@@ -9,28 +9,24 @@ export const EXPERIENCES = [
     {
         year: "2024 - Present",
         role: "Learning Frameworks",
-        company: "",
         description: `Actively exploring and gaining hands-on experience with frameworks to enhance development efficiency and streamline workflows. Focusing on mastering core concepts, applying practical knowledge, and building scalable, real-world projects to solidify skills.`,
         technologies: ["React.js", "Node.js", "MongoDb", "Tailwind"],
     },
     {
         year: "2022 - 2024",
         role: "Frontend Developer",
-        company: "",
         description: `Designed and developed user-friendly interfaces for web applications using HTML, CSS, and JavaScript. Collaborated closely with backend developers to ensure seamless integration of frontend components with APIs. Delivered responsive designs and optimized performance to enhance user experience.`,
         technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
         year: "2021 - 2022",
         role: "Web Design",
-        company: "",
         description: `Designed and maintained engaging web applications, leveraging Figma for UI/UX design and utilizing JavaScript, HTML, and CSS for implementation. Collaborated with cross-functional teams to ensure the delivery of high-quality, user-centric software products on time and aligned with project goals.`,
         technologies: ["Figma", "Canva"],
     },
     {
         year: "2020 - 2021",
         role: "Backend Developer",
-        company: "",
         description: `Gained hands-on experience in backend development, specializing in server-side logic, database management, and API integration. Successfully designed and implemented efficient systems to ensure seamless application functionality and robust data management. Proficient in creating scalable and secure backend solutions tailored to meet specific project requirements.`,
         technologies: ["C/C++", "Java", "PHP", "XAMPP", "Bytehost"],
     },
