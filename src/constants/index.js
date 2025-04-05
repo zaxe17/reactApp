@@ -87,17 +87,18 @@ export const skills = [
             { name: "HTML", level: 80 },
             { name: "CSS", level: 90 },
             { name: "Tailwind", level: 25 },
-            { name: "JavaScript", level: 70 },
+            { name: "JavaScript", level: 56 },
             { name: "React.js", level: 30 },
         ],
     },
     {
         category: "Back-end",
         skills: [
-            { name: "Java", level: 48 },
-            { name: "PHP", level: 60 },
+            { name: "Java", level: 38 },
+            { name: "PHP", level: 48 },
+            { name: "Python", level: 10 },
             { name: "C", level: 34 },
-            { name: "C++", level: 40 },
+            { name: "C++", level: 30 },
         ],
     },
 ];
