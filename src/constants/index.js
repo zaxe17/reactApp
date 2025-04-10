@@ -75,8 +75,8 @@ export const PROJECTS = [
         title: "Dictionary",
         image: [FILES.project6, FILES.project7],
         description:
-            "This group project for our RIPH to show of beautiful places in Kawit, and also about history",
-        link: "https://riph-kawit.netlify.app/",
+            "A dictionary with a search function to look up words and books. The project is not fully finished.",
+        link: "https://dictionary1.vercel.app/",
         technologies: ["React", "Tailwind"],
     },
 ];
