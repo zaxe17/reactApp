@@ -40,7 +40,8 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
-							className="w-full lg:w-1/4 ">
+							className="w-full lg:w-1/4">
+							<div className="lg:h-[200px] lg:py-1">
 								<AnimatePresence mode="wait">
 									<motion.img
 										key={project.image[current[index]]}
@@ -55,6 +56,7 @@ const Projects = () => {
 										transition={{ duration: 1 }}
 									/>
 								</AnimatePresence>
+							</div>
 						</motion.div>
 						<motion.div
 							whileInView={{ opacity: 1, x: 0 }}
