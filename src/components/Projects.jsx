@@ -1,7 +1,27 @@
 import { PROJECTS } from "../constants";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Projects = () => {
+	const [current, setCurrent] = useState(
+		Array(PROJECTS.length).fill(0)
+	);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setCurrent((prevIndexes) =>
+				prevIndexes.map((index, i) =>
+					PROJECTS[i].image.length > 1
+						? (index + 1) % PROJECTS[i].image.length
+						: index
+				)
+			);
+		}, 3000);
+	
+		return () => clearInterval(interval);
+	}, []);
+	
+
 	return (
 		<div className="border-b border-purple-500 pb-4">
 			<motion.h2
@@ -20,14 +40,21 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
-							className="w-full lg:w-1/4">
-							<img
-								src={project.image}
-								alt={project.title}
-								width={250}
-								height={250}
-								className="mb-6 rounded transition-transform duration-300 ease-in-out transform hover:scale-125"
-							/>
+							className="w-full lg:w-1/4 ">
+								<AnimatePresence mode="wait">
+									<motion.img
+										key={project.image[current[index]]}
+										src={project.image[current[index]]}
+										alt={project.title}
+										width={250}
+										height={250}
+										className="mb-6 rounded transition-transform duration-300 ease-in-out transform hover:scale-125"
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										exit={{ opacity: 0 }}
+										transition={{ duration: 1 }}
+									/>
+								</AnimatePresence>
 						</motion.div>
 						<motion.div
 							whileInView={{ opacity: 1, x: 0 }}

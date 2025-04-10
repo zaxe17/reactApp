@@ -3,6 +3,8 @@ import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.png";
 import project4 from "../assets/projects/project-4.jpg";
 import project5 from "../assets/projects/project-5.jpg";
+import project6 from "../assets/projects/project-6.png";
+import project7 from "../assets/projects/project-6(2).png";
 
 export {
     project1,
@@ -10,4 +12,6 @@ export {
     project3,
     project4,
     project5,
+    project6,
+    project7,
 }

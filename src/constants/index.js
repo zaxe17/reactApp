@@ -1,4 +1,3 @@
-import { link } from "framer-motion/client";
 import * as FILES from "./files"
 
 export const HERO_CONTENT = `I am a passionate full stack developer who loves building strong and scalable web applications.`;
@@ -35,7 +34,7 @@ export const EXPERIENCES = [
 export const PROJECTS = [
     {
         title: "Note Taking App",
-        image: FILES.project1,
+        image: [FILES.project1],
         description:
             "Experience creativity and productivity with its user-friendly features and a captivating interface as you take notes of your thoughts, ideas, and reminders—whether you're planning, creating, or brainstorming.",
         link: "http://techtilanotess.22web.org/",
@@ -43,14 +42,14 @@ export const PROJECTS = [
     },
     {
         title: "Portfolio Website",
-        image: FILES.project2,
+        image: [FILES.project2],
         description:
             "A personal portfolio website showcasing projects, skills, and contact information.",
         technologies: ["REACT", "Tailwind"],
     },
     {
         title: "1st Portfolio website",
-        image: FILES.project3,
+        image: [FILES.project3],
         description:
             "A personal project built with HTML, CSS, and JavaScript to practice and enhance frontend development and web design skills. Focused on responsive layouts and user-friendly design.",
         link: "https://janmarcjacolbia.netlify.app",
@@ -58,7 +57,7 @@ export const PROJECTS = [
     },
     {
         title: "Stream Lining Inventory",
-        image: FILES.project4,
+        image: [FILES.project4],
         description:
             "We are dedicated to revolutionizing inventory control through real-time tracking and automation. Our comprehensive system streamlines stock replenishment, order processing, and enhances customer service.",
         link: "http://streamlining.22web.org/",
@@ -66,11 +65,19 @@ export const PROJECTS = [
     },
     {
         title: "Kawit, Cavite City",
-        image: FILES.project5,
+        image: [FILES.project5],
         description:
             "This group project for our RIPH to show of beautiful places in Kawit, and also about history.",
         link: "https://riph-kawit.netlify.app/",
         technologies: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+        title: "Dictionary",
+        image: [FILES.project6, FILES.project7],
+        description:
+            "This group project for our RIPH to show of beautiful places in Kawit, and also about history",
+        link: "https://riph-kawit.netlify.app/",
+        technologies: ["React", "Tailwind"],
     },
 ];
 
