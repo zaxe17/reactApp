@@ -1,6 +1,6 @@
 import { PROJECTS } from "../constants";
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Projects = () => {
 	const [current, setCurrent] = useState(Array(PROJECTS.length).fill(0));
@@ -37,26 +37,22 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
-							className="w-full lg:w-1/4">
-							<AnimatePresence mode="wait">
+							className="w-full lg:w-1/4 flex justify-center">
+							
+							{/* Fixed Image Wrapper */}
+							<div className="w-[250px] h-[200px] relative overflow-hidden rounded mb-6">
 								<motion.img
-									key={project.image[current[index]]} // important for triggering re-render
+									key={project.image[current[index]]}
 									src={project.image[current[index]]}
 									alt={project.title}
-									className="lg:w-[250px] mb-6 rounded duration-300 ease-in-out transform object-contain"
-									initial={{
-										opacity: 0,
-										position: "absolute",
-									}}
-									animate={{
-										opacity: 1,
-										position: "relative",
-									}}
-									exit={{ opacity: 0, position: "absolute" }}
-									transition={{ opacity: { duration: 1 } }}
+									className="absolute top-0 left-0 w-full h-full object-cover"
+									initial={{ opacity: 0 }}
+									animate={{ opacity: 1 }}
+									transition={{ duration: 1 }}
 								/>
-							</AnimatePresence>
+							</div>
 						</motion.div>
+
 						<motion.div
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: 100 }}
