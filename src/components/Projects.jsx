@@ -41,7 +41,7 @@ const Projects = () => {
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
 							className="w-full lg:w-1/4">
-							<div className="lg:h-[200px] py-1">
+							<div className="h-full py-1">
 								<AnimatePresence mode="wait">
 									<motion.img
 										key={project.image[current[index]]}
