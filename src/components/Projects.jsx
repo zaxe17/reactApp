@@ -37,19 +37,19 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
-							className="w-full lg:w-1/4 h-full">
-							<AnimatePresence mode="wait">
+							className="w-full lg:w-1/4 flex justify-center">
+							<div className="w-full h-[200px] relative overflow-hidden rounded-xl mb-6">
 								<motion.img
 									key={current[index]}
 									src={project.image[current[index]]}
 									alt={project.title}
-									className="lg:w-[250px] mb-6 rounded duration-300 ease-in-out transform"
+									className="w-full h-full "
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
 									exit={{ opacity: 0 }}
 									transition={{ duration: 1 }}
 								/>
-							</AnimatePresence>
+							</div>
 						</motion.div>
 						<motion.div
 							whileInView={{ opacity: 1, x: 0 }}
