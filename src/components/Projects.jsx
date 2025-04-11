@@ -38,17 +38,24 @@ const Projects = () => {
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
 							className="w-full lg:w-1/4">
-							<div className="w-full max-h-[250]">
+							<AnimatePresence mode="wait">
 								<motion.img
-									key={project.image[current[index]]}
+									key={project.image[current[index]]} // important for triggering re-render
 									src={project.image[current[index]]}
 									alt={project.title}
-									className="lg:w-[250px] mb-6 rounded duration-300 ease-in-out transform"
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									transition={{ duration: 3 }}
+									className="lg:w-[250px] mb-6 rounded duration-300 ease-in-out transform object-contain"
+									initial={{
+										opacity: 0,
+										position: "absolute",
+									}}
+									animate={{
+										opacity: 1,
+										position: "relative",
+									}}
+									exit={{ opacity: 0, position: "absolute" }}
+									transition={{ opacity: { duration: 1 } }}
 								/>
-							</div>
+							</AnimatePresence>
 						</motion.div>
 						<motion.div
 							whileInView={{ opacity: 1, x: 0 }}
