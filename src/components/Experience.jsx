@@ -10,20 +10,6 @@ const Experience = () => {
 		threshold: 0.1,
 	});
 
-	useEffect(() => {
-		if (inView) {
-			controls.start({
-				height: "100%",
-				transition: { duration: 2, delay: 0.5 },
-			});
-		} else {
-			controls.start({
-				height: 0,
-				transition: { duration: 0.3 },
-			});
-		}
-	}, [inView, controls]);
-
 	return (
 		<div className="border-b border-purple-500 pb-4">
 			<motion.h2
@@ -34,11 +20,9 @@ const Experience = () => {
 				Experience
 			</motion.h2>
 			<div className="relative">
-				<motion.div
+				<div
 					ref={ref}
-					className="absolute border-l-2 border-purple-700 -left-4 lg:left-1/3 transform -translate-x-1/2"
-					initial={{ opacity: 1, height: 0 }}
-					animate={controls}></motion.div>
+					className="absolute border-l-2 border-purple-700 -left-4 lg:left-1/3 transform -translate-x-1/2 h-full"></div>
 				{EXPERIENCES.map((experience, index) => (
 					<div
 						key={index}
