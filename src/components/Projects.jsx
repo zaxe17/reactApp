@@ -37,8 +37,8 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
-							className="w-fit lg:w-1/4 flex justify-center ">
-							<div className="h-[200px] w-[295px] lg:w-full relative overflow-hidden rounded-xl mb-6">
+							className="w-fit lg:w-1/4 flex justify-center">
+							<div className="h-[200px] w-[295px] relative overflow-hidden rounded-xl mb-6">
 								<AnimatePresence mode="wait">
 									<motion.img
 										key={project.image[current[index]]}
