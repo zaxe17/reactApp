@@ -38,12 +38,13 @@ const Projects = () => {
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
 							className="w-fit lg:w-1/4 flex justify-center lg:pr-9">
-							<div className="h-[200px] w-auto max-w-[300px] relative overflow-hidden rounded-xl mb-6">
+							{/* Fixed-size container to avoid layout shift */}
+							<div className="h-[200px] w-[300px] relative overflow-hidden rounded-xl mb-6">
 								<motion.img
 									key={project.image[current[index]]}
 									src={project.image[current[index]]}
 									alt={project.title}
-									className="w-full h-full "
+									className="absolute top-0 left-0 w-full h-full object-contain"
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
 									exit={{ opacity: 0 }}
@@ -51,6 +52,7 @@ const Projects = () => {
 								/>
 							</div>
 						</motion.div>
+
 						<motion.div
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: 100 }}
