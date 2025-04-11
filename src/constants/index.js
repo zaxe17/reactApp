@@ -72,7 +72,7 @@ export const PROJECTS = [
         technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
-        title: "Dictionary",
+        title: "Dictionaries",
         image: [FILES.project6, FILES.project7],
         description:
             "A dictionary with a search function to look up words and books. The project is not fully finished.",
