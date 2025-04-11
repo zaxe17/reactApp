@@ -5,8 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 const Projects = () => {
 	const [current, setCurrent] = useState(Array(PROJECTS.length).fill(0));
 
-	useEffect(() => {
-		const interval = setInterval(() => {
+	const [isVisible, setIsVisible] = useState(true);
+
+useEffect(() => {
+	const interval = setInterval(() => {
+		setIsVisible(false); // Start fade out
+		setTimeout(() => {
 			setCurrent((prevIndexes) =>
 				prevIndexes.map((index, i) =>
 					PROJECTS[i].image.length > 1
@@ -14,10 +18,13 @@ const Projects = () => {
 						: index
 				)
 			);
-		}, 5000);
+			setIsVisible(true); // Start fade in
+		}, 500); // match fade duration
+	}, 5000);
 
-		return () => clearInterval(interval);
-	}, []);
+	return () => clearInterval(interval);
+}, []);
+
 
 	return (
 		<div className="border-b border-purple-500 pb-4">
@@ -37,18 +44,17 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
-							className="w-fit lg:w-1/4 flex justify-center lg:pr-9">
-							{/* Fixed-size container to avoid layout shift */}
+							className="w-fit lg:w-1/4 flex justify-center lg:pr-20">
 							<div className="h-[200px] w-[300px] relative overflow-hidden rounded-xl mb-6">
 								<motion.img
-									key={project.image[current[index]]}
 									src={project.image[current[index]]}
 									alt={project.title}
 									className="absolute top-0 left-0 w-full h-full object-contain"
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									exit={{ opacity: 0 }}
-									transition={{ duration: 1 }}
+									animate={{ opacity: isVisible ? 1 : 0 }}
+									transition={{
+										duration: 0.5,
+										ease: "easeInOut",
+									}}
 								/>
 							</div>
 						</motion.div>
