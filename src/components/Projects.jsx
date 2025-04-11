@@ -37,14 +37,12 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
-							className="w-full lg:w-1/4 ">
+							className="w-full lg:w-1/4">
 								<motion.img
 									key={project.image[current[index]]}
 									src={project.image[current[index]]}
 									alt={project.title}
-									width={250}
-									height={250}
-									className="w-fit h-fit mb-6 rounded duration-300 ease-in-out"
+									className="lg:w-[250px] mb-6 rounded duration-300 ease-in-out"
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
 									transition={{ duration: 3 }}
