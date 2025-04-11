@@ -25,33 +25,33 @@ const Projects = () => {
 				whileInView={{ opacity: 1, y: 0 }}
 				initial={{ opacity: 0, y: -100 }}
 				transition={{ duration: 0.5 }}
-				className="my-20 text-center text-4xl"
-			>
+				className="my-20 text-center text-4xl">
 				Projects
 			</motion.h2>
 			<div>
 				{PROJECTS.map((project, index) => (
 					<div
 						key={index}
-						className="mb-8 flex flex-wrap lg:justify-center"
-					>
+						className="mb-8 flex flex-wrap lg:justify-center gap-6">
 						<motion.div
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
-							className="w-fit lg:w-1/4 flex justify-center lg:pr-20"
-						>
-							<div className="h-[200px] w-[300px] relative overflow-hidden rounded-xl mb-6">
+							className="w-fit lg:w-1/4 flex justify-center ">
+							<div className="h-[200px] w-[295px] lg:w-full relative overflow-hidden rounded-xl mb-6">
 								<AnimatePresence mode="wait">
 									<motion.img
 										key={project.image[current[index]]}
 										src={project.image[current[index]]}
 										alt={project.title}
-										className="absolute top-0 left-0 w-full h-full object-contain"
+										className="absolute top-0 left-0 w-full h-full"
 										initial={{ opacity: 0 }}
 										animate={{ opacity: 1 }}
 										exit={{ opacity: 0 }}
-										transition={{ duration: 0.5, ease: "easeInOut" }}
+										transition={{
+											duration: 0.5,
+											ease: "easeInOut",
+										}}
 									/>
 								</AnimatePresence>
 							</div>
@@ -61,24 +61,25 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: 100 }}
 							transition={{ duration: 1 }}
-							className="w-full max-w-xl lg:w-3/4"
-						>
-							<h6 className="mb-2 font-semibold">{project.title}</h6>
-							<p className="mb-4 text-neutral-400">{project.description}</p>
+							className="w-full max-w-xl lg:w-3/4">
+							<h6 className="mb-2 font-semibold">
+								{project.title}
+							</h6>
+							<p className="mb-4 text-neutral-400">
+								{project.description}
+							</p>
 							<a
 								href={project.link}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="block mb-2 text-purple-500 transition-all ease-in-out duration-200 hover:text-purple-300"
-							>
+								className="block mb-2 text-purple-500 transition-all ease-in-out duration-200 hover:text-purple-300">
 								{project.link}
 							</a>
 							<div className="flex flex-wrap">
 								{project.technologies.map((tech, techIndex) => (
 									<span
 										key={techIndex}
-										className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900 transition-all ease-in-out duration-200 hover:text-purple-500 sm:hover:shadow-fuchsia-shadow"
-									>
+										className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900 transition-all ease-in-out duration-200 hover:text-purple-500 sm:hover:shadow-fuchsia-shadow">
 										{tech}
 									</span>
 								))}
