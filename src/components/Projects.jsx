@@ -37,10 +37,10 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
-							className="w-fit lg:w-1/4 flex justify-center">
-							<div className="w-fit h-[200px] relative overflow-hidden rounded-xl mb-6">
+							className="w-fit lg:w-1/4 flex justify-center lg:pr-9">
+							<div className="h-[200px] w-auto max-w-[300px] relative overflow-hidden rounded-xl mb-6">
 								<motion.img
-									key={current[index]}
+									key={project.image[current[index]]}
 									src={project.image[current[index]]}
 									alt={project.title}
 									className="w-full h-full "
