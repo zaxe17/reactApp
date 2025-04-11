@@ -38,17 +38,19 @@ const Projects = () => {
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
 							className="w-full lg:w-1/4 ">
-							<motion.img
-								key={project.image[current[index]]}
-								src={project.image[current[index]]}
-								alt={project.title}
-								width={250}
-								height={250}
-								className="mb-6 rounded duration-300 ease-in-out"
-								initial={{ opacity: 0 }}
-								animate={{ opacity: 1 }}
-								transition={{ duration: 3 }}
-							/>
+							<div className="w-fit h-40">
+								<motion.img
+									key={project.image[current[index]]}
+									src={project.image[current[index]]}
+									alt={project.title}
+									width={250}
+									height={250}
+									className="mb-6 rounded duration-300 ease-in-out"
+									initial={{ opacity: 0 }}
+									animate={{ opacity: 1 }}
+									transition={{ duration: 3 }}
+								/>
+							</div>
 						</motion.div>
 						<motion.div
 							whileInView={{ opacity: 1, x: 0 }}
