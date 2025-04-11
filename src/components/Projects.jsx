@@ -39,7 +39,6 @@ const Projects = () => {
 							transition={{ duration: 1 }}
 							className="w-full lg:w-1/4 h-full">
 							<motion.img
-								key={project.image[current[index]]}
 								src={project.image[current[index]]}
 								alt={project.title}
 								className="lg:w-[250px] mb-6 rounded duration-300 ease-in-out transform"
