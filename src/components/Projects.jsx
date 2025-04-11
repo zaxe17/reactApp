@@ -44,7 +44,7 @@ const Projects = () => {
 									alt={project.title}
 									width={250}
 									height={250}
-									className="mb-6 rounded duration-300 ease-in-out"
+									className="w-fit h-fit mb-6 rounded duration-300 ease-in-out"
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
 									transition={{ duration: 3 }}
