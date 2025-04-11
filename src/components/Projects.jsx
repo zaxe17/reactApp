@@ -32,7 +32,7 @@ const Projects = () => {
 				{PROJECTS.map((project, index) => (
 					<div
 						key={index}
-						className="mb-8 flex flex-wrap lg:justify-center gap-6">
+						className="mb-8 flex flex-wrap lg:justify-center gap-x-32">
 						<motion.div
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}

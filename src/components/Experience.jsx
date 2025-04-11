@@ -14,7 +14,7 @@ const Experience = () => {
 		if (inView) {
 			controls.start({
 				height: "100%",
-				transition: { duration: 2, delay: 1 },
+				transition: { duration: 2, delay: 0.5 },
 			});
 		} else {
 			controls.start({
