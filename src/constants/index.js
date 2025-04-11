@@ -27,7 +27,7 @@ export const EXPERIENCES = [
         year: "2020 - 2021",
         role: "Backend Developer",
         description: `Gained hands-on experience in backend development, specializing in server-side logic, database management, and API integration. Successfully designed and implemented efficient systems to ensure seamless application functionality and robust data management. Proficient in creating scalable and secure backend solutions tailored to meet specific project requirements.`,
-        technologies: ["C/C++", "Java", "PHP", "XAMPP", "Bytehost"],
+        technologies: ["C/C++", "Java", "PHP"],
     },
 ];
 
