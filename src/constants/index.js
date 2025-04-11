@@ -66,7 +66,7 @@ export const PROJECTS = [
     },
     {
         title: "Stream Lining Inventory",
-        image: [FILES.project4],
+        image: [FILES.project4, FILES.sub_project4],
         description:
             "We are dedicated to revolutionizing inventory control through real-time tracking and automation. Our comprehensive system streamlines stock replenishment, order processing, and enhances customer service.",
         link: "http://streamlining.22web.org/",
