@@ -37,7 +37,7 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
-							className="w-full lg:w-1/4 flex justify-center mx-24">
+							className="w-fit lg:w-1/4 flex justify-center">
 							<div className="w-fit h-[200px] relative overflow-hidden rounded-xl mb-6">
 								<motion.img
 									key={current[index]}
