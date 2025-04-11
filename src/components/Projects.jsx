@@ -43,7 +43,7 @@ const Projects = () => {
 									key={project.image[current[index]]}
 									src={project.image[current[index]]}
 									alt={project.title}
-									className="lg:w-[250px] mb-6 rounded duration-300 ease-in-out"
+									className="lg:w-[250px] mb-6 rounded duration-300 ease-in-out transform"
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
 									transition={{ duration: 3 }}

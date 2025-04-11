@@ -48,6 +48,14 @@ export const PROJECTS = [
         technologies: ["REACT", "Tailwind"],
     },
     {
+        title: "Dictionary",
+        image: [FILES.project6, FILES.project7],
+        description:
+            "A dictionary with a search function to look up words and books. The project is not fully finished.",
+        link: "https://dictionary1.vercel.app/",
+        technologies: ["React", "Tailwind"],
+    },
+    {
         title: "1st Portfolio website",
         image: [FILES.project3],
         description:
@@ -70,14 +78,6 @@ export const PROJECTS = [
             "This group project for our RIPH to show of beautiful places in Kawit, and also about history.",
         link: "https://riph-kawit.netlify.app/",
         technologies: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-        title: "Dictionary",
-        image: [FILES.project6, FILES.project7],
-        description:
-            "A dictionary with a search function to look up words and books. The project is not fully finished.",
-        link: "https://dictionary1.vercel.app/",
-        technologies: ["React", "Tailwind"],
     },
 ];
 
