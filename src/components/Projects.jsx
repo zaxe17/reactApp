@@ -1,6 +1,6 @@
 import { PROJECTS } from "../constants";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Projects = () => {
 	const [current, setCurrent] = useState(Array(PROJECTS.length).fill(0));
