@@ -37,7 +37,7 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
-							className="w-full lg:w-1/4 h-[200px]">
+							className="w-full lg:w-1/4 lg:h-[200px]">
 							<AnimatePresence mode="wait">
 								<motion.img
 									key={project.image[current[index]]}
