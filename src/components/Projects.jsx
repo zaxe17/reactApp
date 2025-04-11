@@ -37,7 +37,7 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
-							className="w-full lg:w-1/4 lg:h-[200px] relative">
+							className="w-full lg:w-1/4">
 							<AnimatePresence mode="wait">
 								<motion.img
 									key={project.image[current[index]]}
@@ -45,7 +45,7 @@ const Projects = () => {
 									alt={project.title}
 									width={250}
 									height={250}
-									className="mb-6 rounded transition-transform duration-300 ease-in-out transform hover:scale-125 absolute"
+									className="mb-6 rounded transition-transform duration-300 ease-in-out transform hover:scale-125 object-cover"
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
 									exit={{ opacity: 0 }}
