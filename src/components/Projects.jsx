@@ -38,7 +38,7 @@ const Projects = () => {
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
 							className="w-full lg:w-1/4 flex justify-center">
-							<div className="h-[200px] w-full aspect-[4/2] relative overflow-hidden rounded-xl mb-6">
+							<div className="w-full aspect-[4/2] relative overflow-hidden rounded-xl mb-6">
 								<AnimatePresence mode="sync">
 									<motion.img
 										key={project.image[current[index]]}
