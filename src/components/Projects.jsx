@@ -37,14 +37,14 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
-							className="w-fit lg:w-1/4 flex justify-center">
+							className="w-fit lg:w-1/4 ">
 							{/* <div className="h-[200px] w-full max-w-[295px] aspect-[4/1] relative overflow-hidden rounded-xl mb-6"> */}
 								<AnimatePresence mode="sync">
 									<motion.img
 										key={project.image[current[index]]}
 										src={project.image[current[index]]}
 										alt={project.title}
-										className="absolute top-0 left-0 w-full h-full"
+										className="w-full h-full"
 										initial={{ opacity: 0 }}
 										animate={{ opacity: 1 }}
 										exit={{ opacity: 0 }}
