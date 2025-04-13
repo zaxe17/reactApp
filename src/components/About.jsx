@@ -20,12 +20,15 @@ const About = () => {
 					transition={{ duration: 1.5 }}
 					className="w-full lg:w-1/2 lg:p-8">
 					<div className="flex items-center justify-center">
-						<img
-							className="rounded-2xl"
-							src={aboutImg}
-							alt="about_image"
-							width={500}
-						/>
+						<div className="relative rounded-2xl overflow-hidden">
+							<img
+								className="rounded-2xl"
+								src={aboutImg}
+								alt="about_image"
+								width={500}
+							/>
+							<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
+						</div>
 					</div>
 				</motion.div>
 				<motion.div

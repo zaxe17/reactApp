@@ -85,17 +85,21 @@ const Hero = () => {
 					</div>
 				</div>
 				<div className="w-full lg:w-1/2 lg:p-8">
-					<div className="flex justify-center lg:justify-center">
-						<motion.img
-							initial={{ x: 100, opacity: 0 }}
-							animate={{ x: 0, opacity: 1 }}
-							transition={{ duration: 1, delay: 1.2 }}
-							className="rounded-2xl"
-							src={profilePic}
-							alt="Profile"
-							width={570}
-						/>
-					</div>
+					<motion.div
+						className="flex justify-center lg:justify-center"
+						initial={{ x: 100, opacity: 0 }}
+						animate={{ x: 0, opacity: 1 }}
+						transition={{ duration: 1, delay: 1.2 }}>
+						<div className="relative rounded-2xl overflow-hidden">
+							<img
+								className="object-cover"
+								src={profilePic}
+								alt="Profile"
+								width={570}
+							/>
+							<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
+						</div>
+					</motion.div>
 				</div>
 			</div>
 		</div>
