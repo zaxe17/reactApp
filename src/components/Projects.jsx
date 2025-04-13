@@ -38,7 +38,7 @@ const Projects = () => {
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
 							className="w-fit lg:w-1/4 flex justify-center">
-							<div className="h-[200px] w-full max-w-[295px] aspect-[4/1] relative overflow-hidden rounded-xl mb-6">
+							{/* <div className="h-[200px] w-full max-w-[295px] aspect-[4/1] relative overflow-hidden rounded-xl mb-6"> */}
 								<AnimatePresence mode="sync">
 									<motion.img
 										key={project.image[current[index]]}
@@ -54,7 +54,7 @@ const Projects = () => {
 										}}
 									/>
 								</AnimatePresence>
-							</div>
+							{/* </div> */}
 						</motion.div>
 						<motion.div
 							whileInView={{ opacity: 1, x: 0 }}
