@@ -23,7 +23,7 @@ const Skills = () => {
 								whileInView={{ opacity: 1, x: 0 }}
 								initial={{ opacity: 0, x: -100 }}
 								transition={{ duration: 1 }}
-								className="text-3xl text-center mb-6 uppercase">
+								className="text-xl lg:text-3xl text-center mb-6 uppercase">
 								{column.category}
 							</motion.h3>
 							<motion.div
@@ -33,7 +33,7 @@ const Skills = () => {
 								className="bg-neutral-800 p-6 rounded-lg shadow-lg">
 								{column.skills.map((skill, idx) => (
 									<div key={idx} className="progress mb-8">
-										<h3 className="text-xl flex items-center mb-2 text-purple-600">
+										<h3 className="text-lg flex items-center mb-2 text-purple-600">
 											{skill.name}
 											<span className="ml-auto text-gray-400">
 												{skill.level}%
@@ -68,7 +68,7 @@ const Skills = () => {
 								whileInView={{ opacity: 1, x: 0 }}
 								initial={{ opacity: 0, x: 100 }}
 								transition={{ duration: 1 }}
-								className="text-3xl text-center mb-6 uppercase">
+								className="text-xl lg:text-3xl text-center mb-6 uppercase">
 								{column.category}
 							</motion.h3>
 							<motion.div
@@ -78,7 +78,7 @@ const Skills = () => {
 								className="bg-neutral-800 p-6 rounded-lg shadow-xl">
 								{column.skills.map((skill, idx) => (
 									<div key={idx} className="progress mb-8">
-										<h3 className="text-xl flex items-center mb-2 text-purple-600">
+										<h3 className="text-lg flex items-center mb-2 text-purple-600">
 											{skill.name}
 											<span className="ml-auto text-gray-400">
 												{skill.level}%
