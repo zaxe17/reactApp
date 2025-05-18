@@ -65,7 +65,7 @@ const Hero = () => {
 									animate={{ "--x": "-100%" }}
 									whileTap={{ scale: 0.97 }}
 									transition={{
-										delay: index * 0.2,
+										delay: index,
 										repeat: Infinity,
 										repeatType: "loop",
 										repeatDelay: 1,
