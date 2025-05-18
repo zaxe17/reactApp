@@ -37,7 +37,7 @@ export const PROJECTS = [
         image: [FILES.project1, FILES.sub1_project1, FILES.sub2_project1, FILES.sub3_project1],
         description:
             "Experience creativity and productivity with its user-friendly features and a captivating interface as you take notes of your thoughts, ideas, and reminders—whether you're planning, creating, or brainstorming.",
-        link: "http://techtilanotess.22web.org/",
+        link: "http://techtilanotess.22web.org",
         technologies: ["HTML", "CSS", "JavaScript", "PHP", "XAMPP"],
     },
     {
@@ -45,7 +45,7 @@ export const PROJECTS = [
         image: [FILES.project2],
         description:
             "A personal portfolio website showcasing projects, skills, and contact information.",
-        link: "https://jacolbia.vercel.app/",
+        link: "https://jacolbia.vercel.app",
         technologies: ["REACT", "Tailwind"],
     },
     {
@@ -53,7 +53,7 @@ export const PROJECTS = [
         image: [FILES.project6, FILES.sub_project6],
         description:
             "A dictionary with a search function to look up words and books. The project is not fully finished.",
-        link: "https://dictionary1.vercel.app/",
+        link: "https://dictionary1.vercel.app",
         technologies: ["React", "Tailwind"],
     },
     {
@@ -69,7 +69,7 @@ export const PROJECTS = [
         image: [FILES.project4, FILES.sub_project4],
         description:
             "We are dedicated to revolutionizing inventory control through real-time tracking and automation. Our comprehensive system streamlines stock replenishment, order processing, and enhances customer service.",
-        link: "http://streamlining.22web.org/",
+        link: "http://streamlining.22web.org",
         technologies: ["HTML", "CSS", "XAMPP", "PHP", "MySQL"],
     },
     {
@@ -77,8 +77,16 @@ export const PROJECTS = [
         image: [FILES.project5, FILES.sub_project5],
         description:
             "This group project for our RIPH to show of beautiful places in Kawit, and also about history.",
-        link: "https://riph-kawit.netlify.app/",
+        link: "https://riph-kawit.netlify.app",
         technologies: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+        title: "Discord Server Invitation",
+        image: [FILES.project7],
+        description:
+            "A clean landing page that invites users to join a Discord server with a direct link and simple call-to-action.",
+        link: "https://dcserver.vercel.app",
+        technologies: ["React", "Three.js", "Tailwind"],
     },
 ];
 
@@ -114,7 +122,7 @@ export const skills = [
 export const button = [
     {
         label: "Discord",
-        link: "https://dcserver.vercel.app/"
+        link: "https://dcserver.vercel.app"
     },
     {
         label: "Resume",

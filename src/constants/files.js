@@ -10,6 +10,7 @@ import project5 from "../assets/projects/project-5.jpg";
 import sub_project5 from "../assets/projects/project-5(2).png";
 import project6 from "../assets/projects/project-6.png";
 import sub_project6 from "../assets/projects/project-6(2).png";
+import project7 from "../assets/projects/project-7.png";
 import resume from "../assets/Jacolbia_Resume.pdf";
 
 export {
@@ -25,5 +26,6 @@ export {
     sub_project5,
     project6,
     sub_project6,
+    project7,
     resume,
 }
