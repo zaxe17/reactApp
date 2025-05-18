@@ -116,4 +116,8 @@ export const button = [
         label: "Discord",
         link: "https://dcserver.vercel.app/"
     },
+    {
+        label: "Resume",
+        link: "https://dcserver.vercel.app/"
+    },
 ]

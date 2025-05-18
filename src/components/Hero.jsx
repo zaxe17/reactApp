@@ -3,6 +3,7 @@ import profilePic from "../assets/jacolbia.png";
 import { motion } from "framer-motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
+/* SET ANIMATION FROM FIRST PAGE */
 const container = (delay) => ({
 	hidden: { x: -100, opacity: 0 },
 	visible: {
@@ -13,6 +14,7 @@ const container = (delay) => ({
 });
 
 const Hero = () => {
+	/* TYPEWRITER ANIMATION */
 	const [text] = useTypewriter({
 		words: ["Frontend Developer", "Backend Developer"],
 		loop: {},
@@ -21,8 +23,10 @@ const Hero = () => {
 	return (
 		<div className="border-b border-purple-500 pb-4 lg:mb-35">
 			<div className="flex flex-wrap">
+				{/* CONTENT FROM LEFT */}
 				<div className="w-full lg:w-1/2">
 					<div className="flex flex-col items-start">
+						{/* NAME */}
 						<motion.h1
 							variants={container(0)}
 							initial="hidden"
@@ -30,6 +34,7 @@ const Hero = () => {
 							className="pb-10 lg:pb-0 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl">
 							Jan Marc Jacolbia
 						</motion.h1>
+						{/* DISPLAY WORD FROM TYPEWRITER */}
 						<motion.span
 							variants={container(0.5)}
 							initial="hidden"
@@ -38,6 +43,7 @@ const Hero = () => {
 							I'm a <span>{text}</span>
 							<Cursor cursorColor="violet" />
 						</motion.span>
+						{/* TEXT CONTENT */}
 						<motion.p
 							variants={container(1)}
 							initial="hidden"
@@ -45,14 +51,15 @@ const Hero = () => {
 							className="my-2 max-w-xl py-6 font-light tracking-tighter text-xl">
 							{HERO_CONTENT}
 						</motion.p>
-						{button.map((btn, index) => (
-							<motion.div
-								key={index}
-								className="flex items-center justify-center gap-6 lg:gap-10 mb-10 lg:my-10 font-thin tracking-[5px]"
-								variants={container(1.5)}
-								initial="hidden"
-								animate="visible">
+						{/* BUTTON CONTENT */}
+						<motion.div
+							className="flex items-center justify-center gap-6 lg:gap-10 mb-10 lg:my-10 font-thin tracking-[5px]"
+							variants={container(1.5)}
+							initial="hidden"
+							animate="visible">
+							{button.map((btn, index) => (
 								<motion.button
+									key={index}
 									className="px-5 lg:px-15 py-2 lg:py-3 rounded-md relative radial-gradient cursor-pointer"
 									initial={{ "--x": "100%", scale: 1 }}
 									animate={{ "--x": "-100%" }}
@@ -80,8 +87,8 @@ const Hero = () => {
 									</span>
 									<span className="block absolute inset-0 rounded-md p-px linear-overlay" />
 								</motion.button>
-							</motion.div>
-						))}
+							))}
+						</motion.div>
 					</div>
 				</div>
 				<div className="w-full lg:w-1/2 lg:p-8">
