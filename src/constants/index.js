@@ -118,6 +118,6 @@ export const button = [
     },
     {
         label: "Resume",
-        link: "https://dcserver.vercel.app/"
+        link: FILES.resume,
     },
 ]
