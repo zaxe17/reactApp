@@ -33,7 +33,7 @@ const Skills = () => {
 								className="bg-neutral-800 p-6 rounded-lg shadow-lg">
 								{column.skills.map((skill, idx) => (
 									<div key={idx} className="progress lg:mb-8 mb-5">
-										<h3 className="text-lg flex items-center mb-2 text-purple-600">
+										<h3 className="lg:text-lg text-base flex items-center mb-2 text-purple-600">
 											{skill.name}
 											<span className="ml-auto text-gray-400">
 												{skill.level}%
@@ -78,7 +78,7 @@ const Skills = () => {
 								className="bg-neutral-800 p-6 rounded-lg shadow-xl">
 								{column.skills.map((skill, idx) => (
 									<div key={idx} className="progress lg:mb-8 mb-5">
-										<h3 className="text-lg flex items-center mb-2 text-purple-600">
+										<h3 className="lg:text-lg text-base flex items-center mb-2 text-purple-600">
 											{skill.name}
 											<span className="ml-auto text-gray-400">
 												{skill.level}%
