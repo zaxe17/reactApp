@@ -71,10 +71,10 @@ const Projects = () => {
 								href={project.link}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="block mb-2 text-purple-500 transition-all ease-in-out duration-200 hover:text-purple-300 w-fit">
+								className="block mb-2 text-purple-900 transition-all ease-in-out duration-200 hover:text-purple-500 w-fit select-none">
 								{project.link}
 							</a>
-							<div className="flex flex-wrap">
+							<div className="flex flex-wrap select-none">
 								{project.technologies.map((tech, techIndex) => (
 									<span
 										key={techIndex}

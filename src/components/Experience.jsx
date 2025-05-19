@@ -58,7 +58,7 @@ const Experience = () => {
 							<p className="mb-4 text-neutral-400">
 								{experience.description}
 							</p>
-							<div className="flex flex-wrap">
+							<div className="flex flex-wrap select-none">
 								{experience.technologies.map((tech, index) => (
 									<span
 										key={index}
