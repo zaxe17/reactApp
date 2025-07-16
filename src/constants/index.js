@@ -88,6 +88,14 @@ export const PROJECTS = [
         link: "https://dcserver.vercel.app",
         technologies: ["React", "Three.js", "Tailwind"],
     },
+    {
+        title: "Aurora Polytechnic College Enrollment",
+        image: [FILES.project8, FILES.sub1_project8, FILES.sub2_project8, FILES.sub3_project8, FILES.sub4_project8, FILES.sub5_project8, FILES.sub6_project8, FILES.sub7_project8],
+        description:
+            "Aurora Polytechnic College is a dynamic web app developed by Group 2 using Laravel. It streamlines student records, enrollment, and academic management, showcasing the group’s skills in backend logic, routing, and UI design.",
+        link: "https://maroon-gnat-207518.hostingersite.com/",
+        technologies: ["Laravel", "MySql", "phpMyAdmin", "Bootstrap"],
+    },
 ];
 
 export const CONTACT = {
