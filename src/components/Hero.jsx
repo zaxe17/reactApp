@@ -98,7 +98,7 @@ const Hero = () => {
 						initial={{ x: 100, opacity: 0 }}
 						animate={{ x: 0, opacity: 1 }}
 						transition={{ duration: 1, delay: 1.2 }}>
-						<div className="relative rounded-2xl overflow-hidden">
+						<div className="relative rounded-2xl overflow-hidden select-none">
 							<img
 								className="object-cover"
 								src={profilePic}

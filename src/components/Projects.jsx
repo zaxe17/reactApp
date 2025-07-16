@@ -44,7 +44,7 @@ const Projects = () => {
 										key={project.image[current[index]]}
 										src={project.image[current[index]]}
 										alt={project.title}
-										className="absolute top-0 left-0 w-full h-full object-cover"
+										className="absolute top-0 left-0 w-full h-full object-cover select-none pointer-events-none"
 										initial={{ opacity: 0 }}
 										animate={{ opacity: 1 }}
 										exit={{ opacity: 0 }}

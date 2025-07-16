@@ -22,7 +22,7 @@ const About = () => {
 					<div className="flex items-center justify-center">
 						<div className="relative rounded-2xl overflow-hidden">
 							<img
-								className="rounded-2xl"
+								className="rounded-2xl select-none"
 								src={aboutImg}
 								alt="about_image"
 								width={500}
