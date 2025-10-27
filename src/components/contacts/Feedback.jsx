@@ -35,14 +35,14 @@ const Feedback = () => {
 
 			if (res.success) {
 				setStatus(
-					"✅ Thank you! Your message has been sent successfully."
+					"Thank you! Your message has been sent successfully."
 				);
 				event.target.reset();
 			} else {
-				setStatus("❌ Something went wrong. Please try again.");
+				setStatus("Something went wrong. Please try again.");
 			}
 		} catch (error) {
-			setStatus("⚠️ Network error. Please try again later.");
+			setStatus("Network error. Please try again later.");
 		}
 	};
 
@@ -81,9 +81,9 @@ const Feedback = () => {
 				{status && (
 					<p
 						className={`text-center mt-3 text-sm ${
-							status.startsWith("✅")
+							status.startsWith("Thank")
 								? "text-green-400"
-								: status.startsWith("❌")
+								: status.startsWith("wrong")
 								? "text-red-400"
 								: "text-yellow-400"
 						}`}>
