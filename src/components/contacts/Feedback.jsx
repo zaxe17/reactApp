@@ -14,7 +14,7 @@ const Feedback = () => {
 		const rawName = formData.get("name").trim();
 		const userName = capitalizeWords(rawName);
 
-		formData.append("access_key", import.meta.env.VITE_ACCESS_KEY);
+		formData.append("access_key", import.meta.env.ACCESS_KEY);
 		// formData.append("access_key", "1ce992dc-25b6-4b14-8f12-b1285416b1f7");
 		formData.append("subject", "New Feedback from Website");
 		formData.append("from_name", `${userName} Feedback Message`);
