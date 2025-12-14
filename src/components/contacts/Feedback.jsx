@@ -98,17 +98,17 @@ const Feedback = () => {
 			   =============================== */
 			if (web3Success && mongoSuccess) {
 				setStatus(
-					"✅ Thank you! Your message was sent and saved successfully."
+					"Thank you! Your message was sent and saved successfully."
 				);
 				event.target.reset();
 			} else if (web3Success && !mongoSuccess) {
 				setStatus(
-					"⚠️ Email sent, but database save failed. We still received your message."
+					"Email sent, but database save failed. We still received your message."
 				);
 				event.target.reset();
 			} else if (!web3Success && mongoSuccess) {
 				setStatus(
-					"⚠️ Message saved, but email notification failed. We still received your message."
+					"Message saved, but email notification failed. We still received your message."
 				);
 				event.target.reset();
 			} else {
@@ -119,7 +119,7 @@ const Feedback = () => {
 		} catch (err) {
 			console.error("Unexpected submit error:", err);
 			setStatus(
-				"⚠️ Network error. Please check your connection."
+				"Network error. Please check your connection."
 			);
 		} finally {
 			setIsSubmitting(false);
