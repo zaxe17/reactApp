@@ -24,7 +24,7 @@ const Experience = () => {
 					className="absolute border-l-2 border-purple-700 -left-4 lg:left-1/3 transform -translate-x-1/2 h-full"
 					whileInView={{ opacity: 1 }}
 					initial={{ opacity: 0 }}
-					transition={{ duration: 1, delay: 1 }}></motion.div>
+					transition={{ duration: 1 }}></motion.div>
 				{EXPERIENCES.map((experience, index) => (
 					<div
 						key={index}
