@@ -5,7 +5,7 @@ let cachedClient = null;
 async function connectDB() {
   if (cachedClient) return cachedClient;
 
-  const client = new MongoClient(import.meta.env.MONGODB_URI);
+  const client = new MongoClient(process.env.MONGODB_URI);
   await client.connect();
   cachedClient = client;
   return client;
