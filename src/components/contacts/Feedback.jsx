@@ -119,7 +119,7 @@ const Feedback = () => {
 			<motion.form
 				whileInView={{ opacity: 1 }}
 				initial={{ opacity: 0 }}
-				transition={{ duration: 1, delay: 0.5 }}
+				transition={{ duration: 1 }}
 				onSubmit={onSubmit}
 				className="lg:w-1/2 bg-neutral-900 p-8 rounded-2xl shadow-lg flex flex-col gap-4"
 				noValidate>
