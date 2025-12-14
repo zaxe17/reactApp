@@ -7,6 +7,7 @@ const Feedback = () => {
 
 	const onSubmit = async (event) => {
 		event.preventDefault();
+		setStatus("");
 		setIsSubmitting(true);
 
 		const formData = new FormData(event.target);
