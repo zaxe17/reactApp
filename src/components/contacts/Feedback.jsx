@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Feedback = () => {
 	const [status, setStatus] = useState("");
@@ -20,7 +21,14 @@ const Feedback = () => {
 		const message = formData.get("message")?.trim() || "";
 
 		if (!name || !email || !message) {
-			setStatus("❌ All fields are required.");
+			setStatus("All fields are required.");
+			setIsSubmitting(false);
+			return;
+		}
+
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		if (!emailRegex.test(email)) {
+			setStatus("Please enter a valid email address.");
 			setIsSubmitting(false);
 			return;
 		}
@@ -29,17 +37,12 @@ const Feedback = () => {
 		let mongoSuccess = false;
 
 		try {
-			/* ===============================
-			   1️⃣ WEB3FORMS (EMAIL)
-			   =============================== */
 			try {
 				const web3Res = await fetch(
 					"https://api.web3forms.com/submit",
 					{
 						method: "POST",
-						headers: {
-							"Content-Type": "application/json",
-						},
+						headers: { "Content-Type": "application/json" },
 						body: JSON.stringify({
 							access_key: import.meta.env.VITE_ACCESS_KEY,
 							subject: "New Feedback from Website",
@@ -55,50 +58,37 @@ const Feedback = () => {
 				const web3Result = await web3Res.json();
 				web3Success = web3Result.success;
 
-				if (!web3Success) {
-					console.error("Web3Forms error:", web3Result);
-				}
+				if (!web3Success) console.error("Web3Forms error:", web3Result);
 			} catch (err) {
 				console.error("Web3Forms request failed:", err);
 			}
 
-			/* ===============================
-			   2️⃣ MONGODB BACKEND
-			   =============================== */
 			try {
 				const mongoRes = await fetch("/api/feedback", {
 					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
+					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({ name, email, message }),
 				});
 
-				if (mongoRes.ok) {
-					const mongoResult = await mongoRes.json();
-					mongoSuccess = mongoResult.success;
-					if (!mongoSuccess) {
-						console.error(
-							"MongoDB save failed:",
-							mongoResult
-						);
-					}
+				const mongoResult = await mongoRes.json();
+
+				if (mongoRes.ok && mongoResult.success) {
+					mongoSuccess = true;
 				} else {
+					mongoSuccess = false;
 					console.error(
-						"MongoDB API error:",
-						mongoRes.status
+						"MongoDB save failed:",
+						mongoResult.error || mongoRes.status
 					);
 				}
 			} catch (err) {
+				mongoSuccess = false;
 				console.error("MongoDB request failed:", err);
 			}
 
-			/* ===============================
-			   3️⃣ FINAL STATUS MESSAGE
-			   =============================== */
 			if (web3Success && mongoSuccess) {
 				setStatus(
-					"Thank you! Your message was sent and saved successfully."
+					"Thank you for sharing your thoughts!"
 				);
 				event.target.reset();
 			} else if (web3Success && !mongoSuccess) {
@@ -113,14 +103,12 @@ const Feedback = () => {
 				event.target.reset();
 			} else {
 				setStatus(
-					"❌ Failed to process your message. Please try again later."
+					"Failed to process your message. Please try again later."
 				);
 			}
 		} catch (err) {
 			console.error("Unexpected submit error:", err);
-			setStatus(
-				"Network error. Please check your connection."
-			);
+			setStatus("Network error. Please check your connection.");
 		} finally {
 			setIsSubmitting(false);
 		}
@@ -128,10 +116,13 @@ const Feedback = () => {
 
 	return (
 		<div className="flex justify-center px-4">
-			<form
+			<motion.form
+				whileInView={{ opacity: 1 }}
+				initial={{ opacity: 0 }}
+				transition={{ duration: 1, delay: 0.5 }}
 				onSubmit={onSubmit}
-				className="w-full max-w-lg bg-neutral-900 p-8 rounded-2xl shadow-lg flex flex-col gap-4 text-white"
-			>
+				className="w-full max-w-lg bg-neutral-900 p-8 rounded-2xl shadow-lg flex flex-col gap-4"
+				noValidate>
 				<h2 className="text-2xl font-bold text-center">
 					Send Feedback
 				</h2>
@@ -140,7 +131,7 @@ const Feedback = () => {
 					name="name"
 					placeholder="Your Name"
 					required
-					className="p-3 rounded bg-neutral-800"
+					className="p-3 rounded bg-neutral-700 focus:outline-none"
 				/>
 
 				<input
@@ -148,28 +139,25 @@ const Feedback = () => {
 					type="email"
 					placeholder="Email"
 					required
-					className="p-3 rounded bg-neutral-800"
+					className="p-3 rounded bg-neutral-700 focus:outline-none"
 				/>
 
 				<textarea
 					name="message"
 					placeholder="Message"
 					required
-					className="p-3 rounded bg-neutral-800"
+					className="p-3 rounded bg-neutral-700 resize-none focus:outline-none"
 				/>
 
 				<button
 					type="submit"
 					disabled={isSubmitting}
-					className="bg-blue-600 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
-				>
+					className="bg-purple-600 py-2 rounded hover:bg-purple-700 disabled:opacity-50 transition-all duration-300 ease-in-out">
 					{isSubmitting ? "Submitting..." : "Submit"}
 				</button>
 
-				{status && (
-					<p className="text-center text-sm">{status}</p>
-				)}
-			</form>
+				{status && <p className="text-center text-sm">{status}</p>}
+			</motion.form>
 		</div>
 	);
 };
