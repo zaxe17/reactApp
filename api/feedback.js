@@ -1,59 +1,49 @@
-import { MongoClient, ServerApiVersion } from "mongodb";
+import { MongoClient } from "mongodb";
 
-const uri = process.env.MONGODB_URI;
-const dbName = "FeedbackDB";
-const collectionName = "Feedbacks";
+let cachedClient = null;
 
-let client;
-let collection;
+async function connectDB() {
+	if (cachedClient) return cachedClient;
 
-// Connect once (re-use in serverless functions)
-async function connectToDB() {
-    if (collection) return collection;
-
-    client = new MongoClient(uri, {
-        serverApi: { version: ServerApiVersion.v1, strict: true, deprecationErrors: true },
-    });
-    await client.connect();
-    const db = client.db(dbName);
-    collection = db.collection(collectionName);
-    return collection;
+	const client = new MongoClient(process.env.MONGODB_URI);
+	await client.connect();
+	cachedClient = client;
+	return client;
 }
 
 export default async function handler(req, res) {
-    if (req.method === "POST") {
-        try {
-            const { name, email, message } = req.body;
+	if (req.method !== "POST") {
+		return res.status(405).json({ success: false });
+	}
 
-            if (!name || !email || !message) {
-                return res.status(400).json({ success: false, error: "Missing required fields" });
-            }
+	try {
+		const { name, email, message } = req.body;
 
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                return res.status(400).json({ success: false, error: "Invalid email format" });
-            }
+		if (!name || !email || !message) {
+			return res.status(400).json({ success: false });
+		}
 
-            const collection = await connectToDB();
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		if (!emailRegex.test(email)) {
+			return res.status(400).json({ success: false });
+		}
 
-            const result = await collection.insertOne({
-                name,
-                email,
-                message,
-                createdAt: new Date(),
-            });
+		const client = await connectDB();
+		const db = client.db("FeedbackDB");
 
-            return res.status(200).json({
-                success: true,
-                message: "Feedback saved successfully",
-                id: result.insertedId.toString(),
-            });
-        } catch (err) {
-            console.error("MongoDB Error:", err);
-            return res.status(500).json({ success: false, error: "Database error", details: err.message });
-        }
-    } else {
-        res.setHeader("Allow", ["POST"]);
-        res.status(405).json({ success: false, error: "Method not allowed" });
-    }
+		const result = await db.collection("FeedbackCollection").insertOne({
+			name,
+			email,
+			message,
+			createdAt: new Date(),
+		});
+
+		res.status(200).json({
+			success: true,
+			id: result.insertedId,
+		});
+	} catch (err) {
+		console.error(err);
+		res.status(500).json({ success: false });
+	}
 }
