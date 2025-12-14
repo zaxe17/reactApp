@@ -115,13 +115,13 @@ const Feedback = () => {
 	};
 
 	return (
-		<div className="flex justify-center px-4">
+		<div className="flex justify-center">
 			<motion.form
 				whileInView={{ opacity: 1 }}
 				initial={{ opacity: 0 }}
 				transition={{ duration: 1, delay: 0.5 }}
 				onSubmit={onSubmit}
-				className="w-full max-w-lg bg-neutral-900 p-8 rounded-2xl shadow-lg flex flex-col gap-4"
+				className="lg:w-1/2 bg-neutral-900 p-8 rounded-2xl shadow-lg flex flex-col gap-4"
 				noValidate>
 				<h2 className="text-2xl font-bold text-center">
 					Send Feedback
