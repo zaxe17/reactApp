@@ -1,7 +1,6 @@
 import { EXPERIENCES } from "../constants";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 
 const Experience = () => {
 	const controls = useAnimation();
@@ -34,7 +33,7 @@ const Experience = () => {
 							className="absolute border-2 border-black my-5 -left-4 lg:left-1/3 transform -translate-x-1/2 h-4 w-4 rounded-full bg-purple-700"
 							whileInView={{ opacity: 1 }}
 							initial={{ opacity: 0 }}
-							transition={{ duration: 1, delay: 1 }}></motion.div>
+							transition={{ duration: 1 }}></motion.div>
 						<motion.div
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}

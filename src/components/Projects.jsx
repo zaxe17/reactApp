@@ -2,6 +2,8 @@ import { PROJECTS } from "../constants";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import { Icon } from "@iconify/react";
+
 const Projects = () => {
 	const [current, setCurrent] = useState(Array(PROJECTS.length).fill(0));
 
@@ -61,19 +63,13 @@ const Projects = () => {
 							initial={{ opacity: 0, x: 100 }}
 							transition={{ duration: 1 }}
 							className="w-full max-w-xl lg:w-3/4">
-							<h6 className="mb-2 font-semibold">
-								{project.title}
-							</h6>
+							<div className="mb-2 flex items-center gap-3 group">
+								<a href={ project.link } className="font-semibold">{project.title}</a>
+								<Icon icon="eva:external-link-outline" className="w-6 h-6 cursor-pointer transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 hidden lg:block" />
+							</div>
 							<p className="mb-4 text-neutral-400">
 								{project.description}
 							</p>
-							<a
-								href={project.link}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="block mb-2 t	ext-purple-900 transition-all ease-in-out duration-200 hover:text-purple-500 w-fit select-none">
-								{project.link}
-							</a>
 							<div className="flex flex-wrap select-none">
 								{project.technologies.map((tech, techIndex) => (
 									<span
