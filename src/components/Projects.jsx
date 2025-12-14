@@ -40,7 +40,7 @@ const Projects = () => {
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
 							className="w-full lg:w-1/4 flex justify-center">
-							<div className="w-full aspect-[4/2] relative overflow-hidden rounded-xl mb-6">
+							<div className="w-full aspect-[4/2] relative overflow-hidden rounded-lg mb-6">
 								<AnimatePresence mode="sync">
 									<motion.img
 										key={project.image[current[index]]}
@@ -62,19 +62,33 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: 100 }}
 							transition={{ duration: 1 }}
-							className="w-full max-w-xl lg:w-3/4">
-							<div className="mb-2 flex items-center gap-3 group">
-								<a href={ project.link } className="font-semibold">{project.title}</a>
-								<Icon icon="eva:external-link-outline" className="w-6 h-6 cursor-pointer transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 hidden lg:block" />
+							className="w-full max-w-xl lg:w-3/4 group">
+							<div className="mb-2">
+								<a
+									href={project.link}
+									className="font-semibold flex items-center gap-3">
+									{project.title}
+									<Icon
+										icon="eva:external-link-outline"
+										className="w-6 h-6 cursor-pointer transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 hidden lg:block"
+									/>
+								</a>
 							</div>
 							<p className="mb-4 text-neutral-400">
 								{project.description}
 							</p>
 							<div className="flex flex-wrap select-none">
+								<span className="w-fit mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-500 shadow-fuchsia-shadow flex items-center gap-1 lg:hidden">
+									<Icon
+										icon="eva:external-link-outline"
+										className="w-4 h-4 cursor-pointer"
+									/>
+									Link
+								</span>
 								{project.technologies.map((tech, techIndex) => (
 									<span
 										key={techIndex}
-										className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900 transition-all ease-in-out duration-200 hover:text-purple-500 sm:hover:shadow-fuchsia-shadow">
+										className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900 transition-all ease-in-out duration-200 hover:text-purple-500 sm:hover:shadow-fuchsia-shadow flex items-center">
 										{tech}
 									</span>
 								))}

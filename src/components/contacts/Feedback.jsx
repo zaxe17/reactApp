@@ -151,7 +151,7 @@ const Feedback = () => {
 				<button
 					type="submit"
 					disabled={isSubmitting}
-					className="bg-purple-600 py-2 rounded hover:bg-purple-700 disabled:opacity-50 transition-all duration-300 ease-in-out">
+					className="bg-purple-800 py-2 rounded hover:bg-purple-600 disabled:opacity-50 transition-all duration-300 ease-in-out">
 					{isSubmitting ? "Submitting..." : "Submit"}
 				</button>
 
