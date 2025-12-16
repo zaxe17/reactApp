@@ -38,6 +38,7 @@ export const PROJECTS = [
         description:
             "Experience creativity and productivity with its user-friendly features and a captivating interface as you take notes of your thoughts, ideas, and reminders—whether you're planning, creating, or brainstorming.",
         link: "http://techtilanotess.22web.org",
+        sourceCode: "https://github.com/zaxe17/techtilaNotes",
         technologies: ["HTML", "CSS", "JavaScript", "PHP", "XAMPP"],
     },
     {
@@ -46,6 +47,7 @@ export const PROJECTS = [
         description:
             "A personal portfolio website showcasing projects, skills, and contact information.",
         link: "https://jacolbia.vercel.app",
+        sourceCode: "https://github.com/zaxe17/reactApp",
         technologies: ["REACT", "Tailwind"],
     },
     {
@@ -54,6 +56,7 @@ export const PROJECTS = [
         description:
             "A dictionary with a search function to look up words and books. The project is not fully finished.",
         link: "https://dictionary1.vercel.app",
+        sourceCode: "https://github.com/zaxe17/dictionary",
         technologies: ["React", "Tailwind"],
     },
     {
@@ -62,6 +65,7 @@ export const PROJECTS = [
         description:
             "A personal project built with HTML, CSS, and JavaScript to practice and enhance frontend development and web design skills. Focused on responsive layouts and user-friendly design.",
         link: "https://janmarcjacolbia.netlify.app",
+        sourceCode: "https://github.com/zaxe17/hello",
         technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
@@ -70,6 +74,7 @@ export const PROJECTS = [
         description:
             "We are dedicated to revolutionizing inventory control through real-time tracking and automation. Our comprehensive system streamlines stock replenishment, order processing, and enhances customer service.",
         link: "http://streamlining.22web.org",
+        sourceCode: "https://github.com/zaxe17/streamlining-inventory",
         technologies: ["HTML", "CSS", "XAMPP", "PHP", "MySQL"],
     },
     {
@@ -78,6 +83,7 @@ export const PROJECTS = [
         description:
             "This group project for our RIPH to show of beautiful places in Kawit, and also about history.",
         link: "https://riph-kawit.netlify.app",
+        sourceCode: "https://github.com/zaxe17/cavitecity",
         technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
@@ -86,6 +92,7 @@ export const PROJECTS = [
         description:
             "A clean landing page that invites users to join a Discord server with a direct link and simple call-to-action.",
         link: "https://dcserver.vercel.app",
+        sourceCode: "https://github.com/zaxe17/Discord-server-button-invite",
         technologies: ["React", "Three.js", "Tailwind"],
     },
     {
@@ -94,6 +101,7 @@ export const PROJECTS = [
         description:
             "Aurora Polytechnic College is a dynamic web app developed by Group 2 using Laravel. It streamlines student records, enrollment, and academic management, showcasing the group’s skills in backend logic, routing, and UI design.",
         link: "https://maroon-gnat-207518.hostingersite.com/",
+        sourceCode: "https://github.com/CJ-Develops/Aurora-Polytechnical-College",
         technologies: ["Laravel", "MySql", "phpMyAdmin", "Bootstrap"],
     },
 ];

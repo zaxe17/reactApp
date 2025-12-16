@@ -63,16 +63,24 @@ const Projects = () => {
 							initial={{ opacity: 0, x: 100 }}
 							transition={{ duration: 1 }}
 							className="w-full max-w-xl lg:w-3/4 group">
-							<div className="mb-2">
-								<a
-									href={project.link}
-									className="font-semibold flex items-center gap-3">
+							<div className="mb-2 flex items-center gap-6">
+								<h1 className="font-semibold">
 									{project.title}
-									<Icon
-										icon="eva:external-link-outline"
-										className="w-6 h-6 cursor-pointer transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 hidden lg:block"
-									/>
-								</a>
+								</h1>
+								<div className="flex items-center gap-2">
+									<a href={project.link}>
+										<Icon
+											icon="eva:external-link-outline"
+											className="w-6 h-6 cursor-pointer transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 hover:text-fuchsia-500 hidden lg:block"
+										/>
+									</a>
+									<a href={project.sourceCode}>
+										<Icon
+											icon="eva:github-fill"
+											className="w-6 h-6 cursor-pointer transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 hover:text-fuchsia-500 hidden lg:block"
+										/>
+									</a>
+								</div>
 							</div>
 							<p className="mb-4 text-neutral-400">
 								{project.description}
@@ -85,10 +93,17 @@ const Projects = () => {
 									/>
 									Link
 								</span>
+								<span className="w-fit mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-500 shadow-fuchsia-shadow flex items-center gap-1 lg:hidden">
+									<Icon
+										icon="eva:github-fill"
+										className="w-4 h-4 cursor-pointer"
+									/>
+									Code
+								</span>
 								{project.technologies.map((tech, techIndex) => (
 									<span
 										key={techIndex}
-										className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900 transition-all ease-in-out duration-200 hover:text-purple-500 sm:hover:shadow-fuchsia-shadow flex items-center">
+										className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900 transition-all ease-in-out duration-200 hover:text-fuchsia-500 sm:hover:shadow-fuchsia-shadow flex items-center">
 										{tech}
 									</span>
 								))}
