@@ -86,14 +86,14 @@ const Projects = () => {
 								{project.description}
 							</p>
 							<div className="flex flex-wrap select-none">
-								<span className="w-fit mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-500 shadow-fuchsia-shadow flex items-center gap-1 lg:hidden">
+								<span className="w-fit mr-2 mt-4 rounded bg-fuchsia-500/10 px-2 py-1 text-sm font-medium text-purple-500 hover:text-fuchsia-500 shadow-fuchsia-shadow flex items-center gap-1 lg:hidden">
 									<Icon
 										icon="eva:external-link-outline"
 										className="w-4 h-4 cursor-pointer"
 									/>
 									Link
 								</span>
-								<span className="w-fit mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-500 shadow-fuchsia-shadow flex items-center gap-1 lg:hidden">
+								<span className="w-fit mr-2 mt-4 rounded bg-fuchsia-500/10 px-2 py-1 text-sm font-medium text-purple-500 hover:text-fuchsia-500 shadow-fuchsia-shadow flex items-center gap-1 lg:hidden">
 									<Icon
 										icon="eva:github-fill"
 										className="w-4 h-4 cursor-pointer"
@@ -103,7 +103,7 @@ const Projects = () => {
 								{project.technologies.map((tech, techIndex) => (
 									<span
 										key={techIndex}
-										className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900 transition-all ease-in-out duration-200 hover:text-fuchsia-500 sm:hover:shadow-fuchsia-shadow flex items-center">
+										className="mr-2 mt-4 rounded bg-neutral-900 backdrop-blur-xl px-2 py-1 text-sm font-medium text-purple-900 transition-all ease-in-out duration-200 hover:text-fuchsia-500 hover:bg-fuchsia-500/10 hover:shadow-fuchsia-shadow flex items-center">
 										{tech}
 									</span>
 								))}

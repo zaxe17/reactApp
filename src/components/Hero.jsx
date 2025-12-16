@@ -60,7 +60,7 @@ const Hero = () => {
 							{button.map((btn, index) => (
 								<motion.button
 									key={index}
-									className="px-5 lg:px-15 py-2 lg:py-3 rounded-md relative radial-gradient cursor-pointer"
+									className="px-5 lg:px-15 py-2 lg:py-3 rounded-md relative radial-gradient cursor-pointer group"
 									initial={{ "--x": "100%", scale: 1 }}
 									animate={{ "--x": "-100%" }}
 									whileTap={{ scale: 0.97 }}
@@ -83,7 +83,7 @@ const Hero = () => {
 									onClick={() =>
 										(window.location.href = btn.link)
 									}>
-									<span className="text-neutral-100 font-light h-full w-full block relative linear-mask text-[10px] lg:text-lg uppercase text-shadow-white">
+									<span className="text-neutral-100 group-hover:text-white group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.8)] font-light h-full w-full block relative linear-mask text-[10px] lg:text-lg uppercase text-shadow-white transition-all duration-300 ease-in-out">
 										{btn.label}
 									</span>
 									<span className="block absolute inset-0 rounded-md p-px linear-overlay" />
