@@ -102,7 +102,16 @@ export const PROJECTS = [
             "Aurora Polytechnic College is a dynamic web app developed by Group 2 using Laravel. It streamlines student records, enrollment, and academic management, showcasing the group’s skills in backend logic, routing, and UI design.",
         link: "https://maroon-gnat-207518.hostingersite.com/",
         sourceCode: "https://github.com/CJ-Develops/Aurora-Polytechnical-College",
-        technologies: ["Laravel", "MySql", "phpMyAdmin", "Bootstrap"],
+        technologies: ["Laravel", "MySql", "XAMPP", "Bootstrap"],
+    },
+    {
+        title: "BanKO",
+        image: [FILES.project9],
+        description:
+            "Built on a secure relational database, the platform ensures that all financial information is processed accurately and safely. By transforming raw transaction history into clear data graphs and actionable insights, BanKO helps users maintain better control over their money and encourages disciplined saving habits within a secure, organized environment.",
+        link: "",
+        sourceCode: "https://github.com/zaxe17/e-wallet",
+        technologies: ["Laravel", "MySql", "XAMPP", "Tailwind", "JavaScript", "Chart.js"],
     },
 ];
 
