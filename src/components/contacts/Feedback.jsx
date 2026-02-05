@@ -52,7 +52,7 @@ const Feedback = () => {
 							email,
 							message,
 						}),
-					}
+					},
 				);
 
 				const web3Result = await web3Res.json();
@@ -78,7 +78,7 @@ const Feedback = () => {
 					mongoSuccess = false;
 					console.error(
 						"MongoDB save failed:",
-						mongoResult.error || mongoRes.status
+						mongoResult.error || mongoRes.status,
 					);
 				}
 			} catch (err) {
@@ -87,23 +87,21 @@ const Feedback = () => {
 			}
 
 			if (web3Success && mongoSuccess) {
-				setStatus(
-					"Thank you for sharing your thoughts!"
-				);
+				setStatus("Thank you for sharing your thoughts!");
 				event.target.reset();
 			} else if (web3Success && !mongoSuccess) {
 				setStatus(
-					"Email sent, but database save failed. We still received your message."
+					"Email sent, but database save failed. We still received your message.",
 				);
 				event.target.reset();
 			} else if (!web3Success && mongoSuccess) {
 				setStatus(
-					"Message saved, but email notification failed. We still received your message."
+					"Message saved, but email notification failed. We still received your message.",
 				);
 				event.target.reset();
 			} else {
 				setStatus(
-					"Failed to process your message. Please try again later."
+					"Failed to process your message. Please try again later.",
 				);
 			}
 		} catch (err) {
@@ -121,38 +119,39 @@ const Feedback = () => {
 				initial={{ opacity: 0 }}
 				transition={{ duration: 1 }}
 				onSubmit={onSubmit}
-				className="lg:w-1/2 bg-neutral-900 p-8 rounded-2xl shadow-lg flex flex-col gap-4"
+				className="lg:w-1/2 w-full bg-neutral-900 p-8 rounded-2xl shadow-lg flex flex-col gap-4"
 				noValidate>
-				<h2 className="text-2xl font-bold text-center">
+				<h2 className="text-2xl font-bold text-center mb-3">
 					Send Feedback
 				</h2>
+				<div className="flex flex-col gap-2">
+					<input
+						name="name"
+						placeholder="Your Name"
+						required
+						className="p-3 rounded-lg bg-neutral-700 focus:outline-none border-2 border-transparent focus:border-purple-500 focus:shadow-[0_0_15px_rgba(217,70,239,0.5)] transition-all duration-300 ease-in-out"
+					/>
 
-				<input
-					name="name"
-					placeholder="Your Name"
-					required
-					className="p-3 rounded bg-neutral-700 focus:outline-none"
-				/>
+					<input
+						name="email"
+						type="email"
+						placeholder="Email"
+						required
+						className="p-3 rounded-lg bg-neutral-700 focus:outline-none border-2 border-transparent focus:border-purple-500 focus:shadow-[0_0_15px_rgba(217,70,239,0.5)] transition-all duration-300 ease-in-out"
+					/>
 
-				<input
-					name="email"
-					type="email"
-					placeholder="Email"
-					required
-					className="p-3 rounded bg-neutral-700 focus:outline-none"
-				/>
-
-				<textarea
-					name="message"
-					placeholder="Message"
-					required
-					className="p-3 rounded bg-neutral-700 resize-none focus:outline-none"
-				/>
+					<textarea
+						name="message"
+						placeholder="Message"
+						required
+						className="p-3 rounded-lg bg-neutral-700 focus:outline-none border-2 border-transparent focus:border-purple-500 focus:shadow-[0_0_15px_rgba(217,70,239,0.5)] transition-all duration-300 ease-in-out resize-none"
+					/>
+				</div>
 
 				<button
 					type="submit"
 					disabled={isSubmitting}
-					className="bg-purple-800 py-2 rounded hover:bg-purple-600 disabled:opacity-50 transition-all duration-300 ease-in-out">
+					className="bg-purple-800 py-2 mt-5 rounded-lg hover:bg-purple-600 disabled:opacity-50 transition-all duration-300 ease-in-out">
 					{isSubmitting ? "Submitting..." : "Submit"}
 				</button>
 

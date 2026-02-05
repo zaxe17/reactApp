@@ -34,13 +34,13 @@ const Projects = () => {
 				{PROJECTS.map((project, index) => (
 					<div
 						key={index}
-						className="mb-8 flex flex-wrap lg:justify-center gap-x-32">
+						className="mb-8 flex flex-wrap lg:justify-center gap-x-32 group">
 						<motion.div
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
 							className="w-full lg:w-1/4 flex justify-center">
-							<div className="w-full aspect-[4/2] relative overflow-hidden rounded-lg mb-6">
+							<div className="w-full aspect-[4/2] relative overflow-hidden rounded-lg mb-6 transition-all duration-300 ease-in-out lg:group-hover:scale-105">
 								<AnimatePresence mode="sync">
 									<motion.img
 										key={project.image[current[index]]}
@@ -62,7 +62,7 @@ const Projects = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							initial={{ opacity: 0, x: 100 }}
 							transition={{ duration: 1 }}
-							className="w-full max-w-xl lg:w-3/4 group">
+							className="w-full max-w-xl lg:w-3/4">
 							<div className="mb-2 flex items-center gap-6">
 								<h1 className="font-semibold">
 									{project.title}
@@ -82,7 +82,7 @@ const Projects = () => {
 									</a>
 								</div>
 							</div>
-							<p className="mb-4 text-neutral-400">
+							<p className="mb-4 text-neutral-400 transition-all duration-300 ease-in-out lg:group-hover:text-neutral-200">
 								{project.description}
 							</p>
 							<div className="flex flex-wrap select-none">
@@ -103,7 +103,7 @@ const Projects = () => {
 								{project.technologies.map((tech, techIndex) => (
 									<span
 										key={techIndex}
-										className="mr-2 mt-4 rounded bg-neutral-900 backdrop-blur-xl px-2 py-1 text-sm font-medium text-purple-900 transition-all ease-in-out duration-200 hover:text-fuchsia-500 hover:bg-fuchsia-500/10 hover:shadow-fuchsia-shadow flex items-center">
+										className="mr-2 mt-4 rounded bg-neutral-900 backdrop-blur-xl px-2 py-1 text-sm font-medium text-purple-900 transition-all ease-in-out duration-300 hover:text-fuchsia-500 hover:bg-fuchsia-500/10 hover:shadow-fuchsia-shadow lg:group-hover:text-fuchsia-500 lg:group-hover:bg-fuchsia-500/10 lg:group-hover:shadow-fuchsia-shadow flex items-center">
 										{tech}
 									</span>
 								))}
