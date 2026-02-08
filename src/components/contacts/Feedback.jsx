@@ -17,8 +17,9 @@ const Feedback = () => {
 			newErrors.name = "Name must be at least 2 characters";
 		} else if (name.trim().length > 100) {
 			newErrors.name = "Name must be less than 100 characters";
-		} else if (!/^[a-zA-Z\s]+$/.test(name)) {
-			newErrors.name = "Name can only contain letters and spaces";
+		} else if (!/^[a-zA-Z\s.]+$/.test(name)) {
+			newErrors.name =
+				"Name can only contain letters, spaces, and periods";
 		}
 
 		// Email validation - Gmail only
