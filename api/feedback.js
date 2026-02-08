@@ -38,7 +38,7 @@ export default async function handler(req, res) {
             createdAt: new Date(),
         });
 
-        res.status(200).json({ success: true, id: result.insertedId });
+        res.status(200).json({ success: true });
     } catch (err) {
         console.error(err);
         res.status(500).json({ success: false, error: "Server error" });
