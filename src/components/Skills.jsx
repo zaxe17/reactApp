@@ -66,29 +66,12 @@ const Skills = () => {
 							</motion.h3>
 
 							<motion.div
-								whileInView={{
-									opacity: 1,
-									x: 0,
-									transition: { duration: 1.5 },
-								}}
+								whileInView={{ opacity: 1, x: 0 }}
 								initial={{
 									opacity: 0,
 									x: isFrontend ? -100 : 100,
 								}}
-								whileHover={{
-									scale: 1.02,
-									transition: {
-										duration: 0.3,
-										ease: "easeInOut",
-									},
-								}}
-								animate={{
-									scale: 1,
-									transition: {
-										duration: 0.3,
-										ease: "easeInOut",
-									},
-								}}
+								transition={{ duration: 1.5 }}
 								className="bg-neutral-900 p-6 rounded-lg shadow-lg">
 								{column.skills.map((skill, idx) => (
 									<div key={idx} className="lg:mb-8 mb-5">
