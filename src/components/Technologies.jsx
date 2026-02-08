@@ -1,11 +1,8 @@
 import { RiReactjsLine } from "react-icons/ri";
-import { SiMongodb } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { DiCss3 } from "react-icons/di";
-import { DiHtml5 } from "react-icons/di";
-import { DiJava } from "react-icons/di";
-import { DiVisualstudio } from "react-icons/di";
+import { SiMongodb, SiPhp } from "react-icons/si";
+import { FaNodeJs, FaLaravel } from "react-icons/fa";
+import { BiLogoTailwindCss } from "react-icons/bi";
+import { DiCss3, DiHtml5, DiJava, DiVisualstudio } from "react-icons/di";
 import { motion } from "framer-motion";
 
 const iconVariants = (duration) => ({
@@ -48,6 +45,13 @@ const Technologies = () => {
 					initial="initial"
 					animate="animate"
 					className="rounded-2xl border-4 border-neutral-800 p-4">
+					<BiLogoTailwindCss className="text-7xl text-cyan-500" />
+				</motion.div>
+				<motion.div
+					variants={iconVariants(3)}
+					initial="initial"
+					animate="animate"
+					className="rounded-2xl border-4 border-neutral-800 p-4">
 					<DiCss3 className="text-7xl text-blue-500" />
 				</motion.div>
 				<motion.div
@@ -76,7 +80,14 @@ const Technologies = () => {
 					initial="initial"
 					animate="animate"
 					className="rounded-2xl border-4 border-neutral-800 p-4">
-					<BiLogoPostgresql className="text-7xl text-sky-700" />
+					<SiPhp className="text-7xl text-[#777BB3]" />
+				</motion.div>
+				<motion.div
+					variants={iconVariants(5)}
+					initial="initial"
+					animate="animate"
+					className="rounded-2xl border-4 border-neutral-800 p-4">
+					<FaLaravel className="text-7xl text-[#FF2D20]" />
 				</motion.div>
 				<motion.div
 					variants={iconVariants(4)}
