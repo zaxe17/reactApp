@@ -192,6 +192,7 @@ const Feedback = () => {
 							name="name"
 							placeholder="Your Name"
 							required
+							autoComplete="name"
 							className={`w-full p-3 rounded-lg bg-neutral-700 focus:outline-none border-2 transition-all duration-300 ease-in-out ${
 								errors.name
 									? "border-red-500 focus:border-red-500"
@@ -212,6 +213,7 @@ const Feedback = () => {
 							type="email"
 							placeholder="example@gmail.com"
 							required
+							autoComplete="email"
 							className={`w-full p-3 rounded-lg bg-neutral-700 focus:outline-none border-2 transition-all duration-300 ease-in-out ${
 								errors.email
 									? "border-red-500 focus:border-red-500"
