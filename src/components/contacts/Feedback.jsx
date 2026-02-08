@@ -119,7 +119,7 @@ const Feedback = () => {
 
 				if (mongoRes.ok && mongoResult.success) {
 					mongoSuccess = true;
-					console.log("✅ MongoDB success, ID:", mongoResult.id);
+					// console.log("✅ MongoDB success, ID:", mongoResult.id);
 				} else {
 					mongoSuccess = false;
 
@@ -222,9 +222,6 @@ const Feedback = () => {
 								{errors.email}
 							</p>
 						)}
-						<p className="text-gray-400 text-xs mt-1 ml-1">
-							Only Gmail addresses are accepted
-						</p>
 					</div>
 
 					{/* Message Textarea */}
