@@ -72,7 +72,7 @@ const Skills = () => {
 									x: isFrontend ? -100 : 100,
 								}}
 								transition={{ duration: 1.5 }}
-								className="bg-neutral-900 p-6 rounded-lg shadow-lg">
+								className="bg-neutral-900 p-6 rounded-lg shadow-lg hover:scale-101">
 								{column.skills.map((skill, idx) => (
 									<div key={idx} className="lg:mb-8 mb-5">
 										<h3 className="lg:text-lg text-base mb-2 text-purple-600">
