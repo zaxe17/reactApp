@@ -59,5 +59,5 @@ app.post("/api/feedback", async (req, res) => {
 });
 
 app.listen(5000, () => {
-	console.log("🚀 Backend running at http://localhost:5000");
+	console.log("Backend running at http://localhost:5000");
 });
