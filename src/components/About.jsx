@@ -27,7 +27,7 @@ const About = () => {
 								alt="about_image"
 								width={500}
 							/>
-							<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
+							<div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black"></div>
 						</div>
 					</div>
 				</motion.div>

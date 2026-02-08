@@ -39,7 +39,7 @@ const Hero = () => {
 							variants={container(0.5)}
 							initial="hidden"
 							animate="visible"
-							className="bg-gradient-to-r from-fuchsia-500 via-slate-500 to-purple-500 bg-clip-text text-2xl lg:text-4xl tracking-tight text-transparent pb-4">
+							className="bg-linear-to-r from-fuchsia-500 via-slate-500 to-purple-500 bg-clip-text text-2xl lg:text-4xl tracking-tight text-transparent pb-4">
 							I'm a <span>{text}</span>
 							<Cursor cursorColor="violet" />
 						</motion.span>
@@ -105,7 +105,7 @@ const Hero = () => {
 								alt="Profile"
 								width={570}
 							/>
-							<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
+							<div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black"></div>
 						</div>
 					</motion.div>
 				</div>

@@ -40,7 +40,7 @@ const Projects = () => {
 							initial={{ opacity: 0, x: -100 }}
 							transition={{ duration: 1 }}
 							className="w-full lg:w-1/4 flex justify-center">
-							<div className="w-full aspect-[4/2] relative overflow-hidden rounded-lg mb-6 transition-all duration-300 ease-in-out lg:group-hover:scale-105">
+							<div className="w-full aspect-4/2 relative overflow-hidden rounded-lg mb-6 transition-all duration-300 ease-in-out lg:group-hover:scale-103">
 								<AnimatePresence mode="sync">
 									<motion.img
 										key={project.image[current[index]]}
