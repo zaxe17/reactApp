@@ -155,7 +155,7 @@ const Feedback = () => {
 					{isSubmitting ? "Submitting..." : "Submit"}
 				</button>
 
-				{status && <p className="text-center text-sm">{status}</p>}
+				{console.log(status)}
 			</motion.form>
 		</div>
 	);

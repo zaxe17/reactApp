@@ -64,7 +64,7 @@ const Projects = () => {
 							transition={{ duration: 1 }}
 							className="w-full max-w-xl lg:w-3/4">
 							<div className="mb-2 flex items-center gap-6">
-								<h1 className="font-semibold">
+								<h1 className="font-semibold text-xl">
 									{project.title}
 								</h1>
 								<div className="flex items-center gap-2">
