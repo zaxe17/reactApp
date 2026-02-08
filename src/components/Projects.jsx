@@ -13,8 +13,8 @@ const Projects = () => {
 				prevIndexes.map((index, i) =>
 					PROJECTS[i].image.length > 1
 						? (index + 1) % PROJECTS[i].image.length
-						: index
-				)
+						: index,
+				),
 			);
 		}, 5000);
 
@@ -86,20 +86,24 @@ const Projects = () => {
 								{project.description}
 							</p>
 							<div className="flex flex-wrap select-none">
-								<span className="w-fit mr-2 mt-4 rounded bg-fuchsia-500/10 px-2 py-1 text-sm font-medium text-purple-500 hover:text-fuchsia-500 shadow-fuchsia-shadow flex items-center gap-1 lg:hidden">
-									<Icon
-										icon="eva:external-link-outline"
-										className="w-4 h-4 cursor-pointer"
-									/>
-									Link
-								</span>
-								<span className="w-fit mr-2 mt-4 rounded bg-fuchsia-500/10 px-2 py-1 text-sm font-medium text-purple-500 hover:text-fuchsia-500 shadow-fuchsia-shadow flex items-center gap-1 lg:hidden">
-									<Icon
-										icon="eva:github-fill"
-										className="w-4 h-4 cursor-pointer"
-									/>
-									Code
-								</span>
+								<a href={project.link}>
+									<span className="w-fit mr-2 mt-4 rounded bg-fuchsia-500/10 px-2 py-1 text-sm font-medium text-purple-500 hover:text-fuchsia-500 shadow-fuchsia-shadow flex items-center gap-1 lg:hidden">
+										<Icon
+											icon="eva:external-link-outline"
+											className="w-4 h-4 cursor-pointer"
+										/>
+										Link
+									</span>
+								</a>
+								<a href={project.sourceCode}>
+									<span className="w-fit mr-2 mt-4 rounded bg-fuchsia-500/10 px-2 py-1 text-sm font-medium text-purple-500 hover:text-fuchsia-500 shadow-fuchsia-shadow flex items-center gap-1 lg:hidden">
+										<Icon
+											icon="eva:github-fill"
+											className="w-4 h-4 cursor-pointer"
+										/>
+										Code
+									</span>
+								</a>
 								{project.technologies.map((tech, techIndex) => (
 									<span
 										key={techIndex}
