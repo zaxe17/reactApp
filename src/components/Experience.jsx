@@ -30,7 +30,7 @@ const Experience = () => {
 						key={index}
 						className="group mb-8 flex flex-wrap lg:justify-center relative">
 						<motion.div
-							className="absolute my-5 -left-4 lg:left-1/3 transform -translate-x-1/2 h-4 w-4 rounded-full bg-purple-700/40 backdrop-blur-md border border-white/20 shadow-lg shadow-purple-900/30 group-hover:bg-white/20 group-hover:border-white/40 group-hover:shadow-fuchsia-500/40 transition-all ease-in-out duration-300"
+							className="absolute my-5 -left-4 lg:left-1/3 transform -translate-x-1/2 h-4 w-4 rounded-full bg-purple-700/40 backdrop-blur-md border border-white/20 shadow-lg shadow-purple-900/30 lg:group-hover:bg-white/20 lg:group-hover:border-white/40 lg:group-hover:shadow-fuchsia-500/40 transition-all ease-in-out duration-300"
 							whileInView={{ opacity: 1 }}
 							initial={{ opacity: 0 }}
 							transition={{ duration: 1 }}
