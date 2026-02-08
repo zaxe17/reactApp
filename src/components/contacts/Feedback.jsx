@@ -25,7 +25,7 @@ const Feedback = () => {
 		if (!email.trim()) {
 			newErrors.email = "Email is required";
 		} else if (!/^[^\s@]+@gmail\.com$/i.test(email)) {
-			newErrors.email = "Only Gmail addresses (@gmail.com) are accepted";
+			newErrors.email = "Gmail addresses (@gmail.com) are accepted";
 		} else if (email.length > 255) {
 			newErrors.email = "Email is too long";
 		}
@@ -209,7 +209,7 @@ const Feedback = () => {
 						<input
 							name="email"
 							type="email"
-							placeholder="Gmail Address (example@gmail.com)"
+							placeholder="example@gmail.com"
 							required
 							className={`w-full p-3 rounded-lg bg-neutral-700 focus:outline-none border-2 transition-all duration-300 ease-in-out ${
 								errors.email

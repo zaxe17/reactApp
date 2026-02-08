@@ -49,7 +49,7 @@ const feedbackValidationRules = [
 		.trim()
 		.notEmpty().withMessage('Email is required')
 		.isEmail().withMessage('Invalid email format')
-		.matches(/@gmail\.com$/i).withMessage('Only Gmail addresses (@gmail.com) are accepted')
+		.matches(/@gmail\.com$/i).withMessage('Gmail addresses (@gmail.com) are accepted')
 		.isLength({ max: 255 }).withMessage('Email is too long'),
 
 	body('message')
