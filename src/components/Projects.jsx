@@ -68,13 +68,13 @@ const Projects = () => {
 									{project.title}
 								</h1>
 								<div className="flex items-center gap-2">
-									<a href={project.link}>
+									<a href={project.link} target="_blank" rel="noopener noreferrer">
 										<Icon
 											icon="eva:external-link-outline"
 											className="w-6 h-6 cursor-pointer transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 hover:text-fuchsia-500 hidden lg:block"
 										/>
 									</a>
-									<a href={project.sourceCode}>
+									<a href={project.sourceCode} target="_blank" rel="noopener noreferrer">
 										<Icon
 											icon="eva:github-fill"
 											className="w-6 h-6 cursor-pointer transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 hover:text-fuchsia-500 hidden lg:block"
@@ -86,7 +86,7 @@ const Projects = () => {
 								{project.description}
 							</p>
 							<div className="flex flex-wrap select-none">
-								<a href={project.link}>
+								<a href={project.link} target="_blank" rel="noopener noreferrer">
 									<span className="w-fit mr-2 mt-4 rounded bg-fuchsia-500/10 px-2 py-1 text-sm font-medium text-purple-500 hover:text-fuchsia-500 shadow-fuchsia-shadow flex items-center gap-1 lg:hidden">
 										<Icon
 											icon="eva:external-link-outline"
@@ -95,7 +95,7 @@ const Projects = () => {
 										Link
 									</span>
 								</a>
-								<a href={project.sourceCode}>
+								<a href={project.sourceCode} target="_blank" rel="noopener noreferrer">
 									<span className="w-fit mr-2 mt-4 rounded bg-fuchsia-500/10 px-2 py-1 text-sm font-medium text-purple-500 hover:text-fuchsia-500 shadow-fuchsia-shadow flex items-center gap-1 lg:hidden">
 										<Icon
 											icon="eva:github-fill"

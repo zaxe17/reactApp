@@ -16,7 +16,7 @@ const container = (delay) => ({
 const Hero = () => {
 	/* TYPEWRITER ANIMATION */
 	const [text] = useTypewriter({
-		words: ["Frontend Developer", "Backend Developer"],
+		words: ["Frontend Developer", "Web Developer"],
 		loop: {},
 	});
 
@@ -81,7 +81,11 @@ const Hero = () => {
 										},
 									}}
 									onClick={() =>
-										(window.location.href = btn.link)
+										window.open(
+											btn.link,
+											"_blank",
+											"noopener,noreferrer",
+										)
 									}>
 									<span className="text-neutral-100 group-hover:text-white group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.8)] font-light h-full w-full block relative linear-mask text-[10px] lg:text-lg uppercase text-shadow-white transition-all duration-300 ease-in-out">
 										{btn.label}
@@ -103,7 +107,7 @@ const Hero = () => {
 								className="object-cover"
 								src={profilePic}
 								alt="Profile"
-								width={570}
+								width={500}
 							/>
 							<div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black"></div>
 						</div>

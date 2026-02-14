@@ -106,7 +106,7 @@ export const PROJECTS = [
     },
     {
         title: "BanKO",
-        image: [FILES.project9],
+        image: [FILES.project9, FILES.sub1_project9, FILES.sub2_project9, FILES.sub3_project9, FILES.sub4_project9, FILES.sub5_project9, FILES.sub6_project9],
         description:
             "Built on a secure relational database, the platform ensures that all financial information is processed accurately and safely. By transforming raw transaction history into clear data graphs and actionable insights, BanKO helps users maintain better control over their money and encourages disciplined saving habits within a secure, organized environment.",
         link: "",

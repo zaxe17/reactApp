@@ -20,8 +20,14 @@ import sub5_project8 from "../assets/projects/project-8 (6).png";
 import sub6_project8 from "../assets/projects/project-8 (7).png";
 import sub7_project8 from "../assets/projects/project-8 (8).png";
 import project9 from "../assets/projects/project-9.png";
+import sub1_project9 from "../assets/projects/project-9 (2).png";
+import sub2_project9 from "../assets/projects/project-9 (3).png";
+import sub3_project9 from "../assets/projects/project-9 (4).png";
+import sub4_project9 from "../assets/projects/project-9 (5).png";
+import sub5_project9 from "../assets/projects/project-9 (6).png";
+import sub6_project9 from "../assets/projects/project-9 (7).png";
 
-import resume from "../assets/jacolbia_cv.pdf";
+import resume from "../assets/jacolbia_Resume.pdf";
 
 export {
     project1,
@@ -46,5 +52,11 @@ export {
     sub6_project8,
     sub7_project8,
     project9,
+    sub1_project9,
+    sub2_project9,
+    sub3_project9,
+    sub4_project9,
+    sub5_project9,
+    sub6_project9,
     resume,
 }

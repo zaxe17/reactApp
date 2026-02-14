@@ -179,7 +179,7 @@ const Feedback = () => {
 				initial={{ opacity: 0 }}
 				transition={{ duration: 1 }}
 				onSubmit={onSubmit}
-				className="lg:w-1/2 w-full bg-neutral-900 p-8 rounded-2xl shadow-lg flex flex-col gap-4"
+				className="lg:w-1/3 w-full bg-neutral-900 p-8 rounded-2xl shadow-lg flex flex-col gap-4"
 				noValidate>
 				<h2 className="text-2xl font-bold text-center mb-3">
 					Send Feedback
