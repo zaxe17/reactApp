@@ -27,7 +27,7 @@ import sub4_project9 from "../assets/projects/project-9 (5).png";
 import sub5_project9 from "../assets/projects/project-9 (6).png";
 import sub6_project9 from "../assets/projects/project-9 (7).png";
 
-import resume from "../assets/jacolbia_Resume.pdf";
+import resume from "../assets/Jacolbia_Resume.pdf";
 
 export {
     project1,
