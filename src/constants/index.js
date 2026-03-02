@@ -113,6 +113,15 @@ export const PROJECTS = [
         sourceCode: "https://github.com/zaxe17/e-wallet",
         technologies: ["Laravel", "MySql", "XAMPP", "Tailwind", "JavaScript", "Chart.js"],
     },
+    {
+        title: "ISKOnnect",
+        image: [FILES.project10],
+        description:
+            "A dedicated social networking hub for students to connect, collaborate, and grow within a secure and supportive campus community.",
+        link: "",
+        sourceCode: "https://github.com/zaxe17/student-social-networking",
+        technologies: ["Laravel", "MySql", "XAMPP", "Tailwind", "JavaScript"],
+    },
 ];
 
 export const CONTACT = {
