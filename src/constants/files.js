@@ -27,6 +27,11 @@ import sub4_project9 from "../assets/projects/project-9 (5).png";
 import sub5_project9 from "../assets/projects/project-9 (6).png";
 import sub6_project9 from "../assets/projects/project-9 (7).png";
 import project10 from "../assets/projects/project-10.png";
+import project11 from "../assets/projects/project-11.png";
+import sub1_project11 from "../assets/projects/project-11 (2).png";
+import sub2_project11 from "../assets/projects/project-11 (3).png";
+import sub3_project11 from "../assets/projects/project-11 (4).png";
+import sub4_project11 from "../assets/projects/project-11 (5).png";
 
 import resume from "../assets/Jacolbia_Resume.pdf";
 
@@ -60,5 +65,10 @@ export {
     sub5_project9,
     sub6_project9,
     project10,
+    project11,
+    sub1_project11,
+    sub2_project11,
+    sub3_project11,
+    sub4_project11,
     resume,
 }

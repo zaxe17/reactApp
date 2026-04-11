@@ -2,7 +2,7 @@ import Navbar from "./components/Nav";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Technologies from "./components/Technologies";
-import Experience from "./components/Experience";
+import Timeline from "./components/Timeline";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
@@ -21,7 +21,7 @@ const App = () => {
 				<About />
 				<Technologies />
 				<Skills />
-				<Experience />
+				<Timeline />
 				<Projects />
 				<Contact />
 			</div>

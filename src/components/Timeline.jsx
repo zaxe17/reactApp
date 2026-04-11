@@ -1,4 +1,4 @@
-import { EXPERIENCES } from "../constants";
+import { TIMELINES } from "../constants";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -16,7 +16,7 @@ const Experience = () => {
 				initial={{ opacity: 0, y: -100 }}
 				transition={{ duration: 0.5 }}
 				className="my-20 text-center text-4xl">
-				Experience
+				Growth Timeline
 			</motion.h2>
 			<div className="relative">
 				<motion.div
@@ -25,7 +25,7 @@ const Experience = () => {
 					whileInView={{ opacity: 1 }}
 					initial={{ opacity: 0 }}
 					transition={{ duration: 1 }} />
-				{EXPERIENCES.map((experience, index) => (
+				{TIMELINES.map((experience, index) => (
 					<div
 						key={index}
 						className="group mb-8 flex flex-wrap lg:justify-center relative">

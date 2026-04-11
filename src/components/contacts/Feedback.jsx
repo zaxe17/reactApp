@@ -179,7 +179,7 @@ const Feedback = () => {
 				initial={{ opacity: 0 }}
 				transition={{ duration: 1 }}
 				onSubmit={onSubmit}
-				className="lg:w-1/3 w-full bg-neutral-900 p-8 rounded-2xl shadow-lg flex flex-col gap-4"
+				className="lg:w-1/3 w-full bg-neutral-900 p-5 rounded-[26px] shadow-lg flex flex-col gap-4"
 				noValidate>
 				<h2 className="text-2xl font-bold text-center mb-3">
 					Send Feedback
@@ -193,7 +193,7 @@ const Feedback = () => {
 							placeholder="Your Name"
 							required
 							autoComplete="name"
-							className={`w-full p-3 rounded-lg bg-neutral-700 focus:outline-none border-2 transition-all duration-300 ease-in-out ${
+							className={`w-full p-3 rounded-md bg-neutral-700 focus:outline-none border-2 transition-all duration-300 ease-in-out ${
 								errors.name
 									? "border-red-500 focus:border-red-500"
 									: "border-transparent focus:border-purple-500 focus:shadow-[0_0_15px_rgba(217,70,239,0.5)]"
@@ -214,7 +214,7 @@ const Feedback = () => {
 							placeholder="example@gmail.com"
 							required
 							autoComplete="email"
-							className={`w-full p-3 rounded-lg bg-neutral-700 focus:outline-none border-2 transition-all duration-300 ease-in-out ${
+							className={`w-full p-3 rounded-md bg-neutral-700 focus:outline-none border-2 transition-all duration-300 ease-in-out ${
 								errors.email
 									? "border-red-500 focus:border-red-500"
 									: "border-transparent focus:border-purple-500 focus:shadow-[0_0_15px_rgba(217,70,239,0.5)]"
@@ -234,7 +234,7 @@ const Feedback = () => {
 							placeholder="Message (minimum 10 characters)"
 							required
 							rows="5"
-							className={`w-full p-3 rounded-lg bg-neutral-700 focus:outline-none border-2 transition-all duration-300 ease-in-out resize-none ${
+							className={`w-full p-3 rounded-md bg-neutral-700 focus:outline-none border-2 transition-all duration-300 ease-in-out resize-none ${
 								errors.message
 									? "border-red-500 focus:border-red-500"
 									: "border-transparent focus:border-purple-500 focus:shadow-[0_0_15px_rgba(217,70,239,0.5)]"
@@ -251,7 +251,7 @@ const Feedback = () => {
 				<button
 					type="submit"
 					disabled={isSubmitting}
-					className="bg-purple-800 py-2 mt-5 rounded-lg hover:bg-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 ease-in-out">
+					className="bg-purple-800 py-2 mt-5 rounded-md hover:bg-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 ease-in-out">
 					{isSubmitting ? "Submitting..." : "Submit"}
 				</button>
 
