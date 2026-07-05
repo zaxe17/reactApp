@@ -9,7 +9,6 @@
     I thrive on transforming complex concepts into user-friendly, visually stunning websites.
 </p>
 
-
 <h1 align="center">My Website</h1>
 <p align="center">
   <i>"As life as fleeting as the first snow."</i> — <b>Hiyuki</b> ❄️
@@ -53,7 +52,6 @@
   <img src="https://img.shields.io/badge/Git-2D2D2D?style=plastic&logo=git&logoColor=F05032" />
   <img src="https://img.shields.io/badge/Figma-2D2D2D?style=plastic&logo=figma&logoColor=F24E1E" />
 </p>
-
 
 <h2 align="center">Links</h2>
 <p align="center">
