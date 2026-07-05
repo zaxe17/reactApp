@@ -146,15 +146,17 @@ const Feedback = () => {
 				event.target.reset();
 			} else if (web3Success && !mongoSuccess) {
 				if (!Object.keys(errors).length && !status) {
-					setStatus(
+					console.log(
 						"Email sent, but database save failed. We still received your message.",
 					);
+					setStatus("Thank you for sharing your thoughts!!!");
 					event.target.reset();
 				}
 			} else if (!web3Success && mongoSuccess) {
-				setStatus(
+				console.log(
 					"Message saved, but email notification failed. We still received your message.",
 				);
+				setStatus("Thank you for sharing your thoughts!!!");
 				setErrors({});
 				event.target.reset();
 			} else {
